@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros Enteogénicos</title>
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="menu-header">
+        <!-- Logo -->
+        <img src="img/logo.png" alt="Logo Editorial" class="logo">
+        
+        <!-- Menú Hamburguesa -->
+        <button id="menu-btn" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </header>
+
+    <!-- Menú Desplegable -->
+    <nav id="menu" class="menu">
+        <div class="menu-content">
+            <!-- Secciones -->
+            <ul class="menu-list">
+                <li><a href="#" class="menu-item">Inicio <img src="img/hongui.png" alt="Honguito"></a></li>
+                <li><a href="#" class="menu-item">Catálogo <img src="img/hongui.png" alt="Honguito"></a></li>
+                <li><a href="#" class="menu-item">Nosotros <img src="img/hongui.png" alt="Honguito"></a></li>
+                <li><a href="#" class="menu-item">Contacto <img src="img/hongui.png" alt="Honguito"></a></li>
+            </ul>
+            
+            <!-- Redes Sociales -->
+            <div class="menu-social">
+                <a href="mailto:tuemail@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail"> tuemail@gmail.com</a>
+                <a href="https://instagram.com/tuinstagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> @tuinstagram</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="cool-section">
+        <div class="text-content">
+            <h2 class="fade-in">Bienvenidos a <br> Libros Enteogénicos</h2>
+            <p class="fade-in delay">
+                Descubre un mundo donde la droga es rica y buena. <br>Asi se ven nuestros libros:
+            </p>
+        </div>
+    
+        <div class="image-gallery">
+            <div class="image-item fade-in delay-2" onclick="openLightbox(0)">
+                <img src="./img/libro1.jpg" alt="Imagen 1">
+            </div>
+            <div class="image-item fade-in delay-2" onclick="openLightbox(1)">
+                <img src="./img/libro2.jpg" alt="Imagen 2">
+            </div>
+            <div class="image-item fade-in delay-2" onclick="openLightbox(2)">
+                <img src="./img/libro3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+    </section>
+    
+    <!-- LIGHTBOX (Visor de imágenes en pantalla completa) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <div class="lightbox-controls">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>📚 Pedidos y consultas: <a href="mailto:editorial@librosenteogenicos.com">editorial@librosenteogenicos.com</a></p>
+            <form id="newsletter-form">
+                <label for="email">💌 Dejanos tu mail para no perderte las novedades</label>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirme</button>
+                </div>
+            </form>
+        </div>
+    </footer>
+
+
+
+    
+    <script src="script.js"></script>
+</body>
