@@ -6,9 +6,10 @@
 }
 
 /* Custom Cursor */
-body {
-    cursor: url('img/hongui.png'), auto;
-}
+/* body, a, button {
+    cursor: url('img/hongui.png'), auto !important;
+    cursor: url('img/hongui.png') 16 16, auto !important; /* Añade un punto de anclaje central 
+} */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -18,6 +19,11 @@ body {
     overflow-x: hidden;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+.mt-10 {
+    margin-top: 10%;
+
 }
 
 /* Hover effects for clickable elements */
