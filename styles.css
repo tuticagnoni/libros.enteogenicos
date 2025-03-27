@@ -1,0 +1,142 @@
+:root {
+    --background-color: #1E1E1E;
+    --main-color: #228B14;
+    --text-color: #EAE3DA;
+    --accent-color: #FA4319;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('img/hongui.png'), auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Hover effects for clickable elements */
+.hover-effect {
+    transition: all 0.2s ease;
+}
+
+.hover-effect:hover {
+    color: var(--main-color);
+    transform: scale(0.95);
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.border-main {
+    border-color: var(--main-color) !important;
+}
+
+.text-main {
+    color: var(--main-color) !important;
+}
+
+
+/* Book Categories Container */
+#bookCategories {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+/* Book Cards */
+.book-category-tag {
+background-color: var(--main-color);
+color: white;
+background-color: rgba(255, 255, 255, 0.1);
+border: 1px solid var(--main-color);
+color: var(--text-color);
+padding: 3px 8px;
+border-radius: 15px;
+display: inline-block;
+margin-bottom: 10px;
+font-size: 0.7rem;
+position: absolute;
+top: 10px;
+left: 10px;
+}
+
+/* Responsive Book Items */
+.book-item {
+/* Mobile: Full width */
+width: 100%;
+max-width: 350px;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+.book-item {
+width: calc(33.333% - 20px);
+}
+}
+
+/* Book Cards */
+.book-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+}
+
+.book-category-tag {
+    background-color: var(--main-color);
+    color: white;
+    padding: 6px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.book-card img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Newsletter */
+#newsletter {
+    background-color: var(--main-color);
+    padding: 50px 0;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0,0,0,0.5);
+    color: var(--text-color);
+}
+
+/* Buttons and Links */
+.btn, .nav-link, .social-icons a {
+    transition: all 0.2s ease;
+}
+
+.btn:hover, .nav-link:hover, .social-icons a:hover {
+    color: var(--main-color);
+    transform: scale(0.95);
+}
