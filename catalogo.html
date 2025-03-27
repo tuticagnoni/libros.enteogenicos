@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Libros Enteogénicos</title>
@@ -12,26 +13,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.8);">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo Editorial" height="50">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Logo Editorial" height="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#donaciones">Donaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
                 </ul>
                 <div class="social-icons ms-3">
-                    <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:contacto@editorial.com" class="text-light"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-2"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
+                            class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -42,24 +46,28 @@
     <section id="catalogo" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 mt-10">Nuestro Catálogo</h2>
-            
+
             <div class="row mb-4">
                 <div class="col-md-6 offset-md-3">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Busca libros por título, autor o tags">
+                    <input type="text" id="searchInput" class="form-control"
+                        placeholder="Busca libros por título, autor o tags">
                 </div>
             </div>
 
-             <!-- Información de Pedidos -->
-            <section id="pedidos" class="bg-dark py-4 mt-4 mb-5 text-center">
+            <!-- Información de Pedidos -->
+            <section id="pedidos" class="bg-dark py-4 text-center">
                 <div class="container">
                     <p class="text-light mb-0">
-                        🚚 Realizá tus pedidos por correo electrónico a 
-                        <a href="mailto:pedidos@editorial.com" class="text-main">pedidos@editorial.com</a>
+                        Pedidos y consultas »
+                        <a href="mailto:libros.enteogenicos@gmail.com"
+                            class="text-main"><b>libros.enteogenicos@gmail.com</b></a>
                     </p>
                 </div>
             </section>
 
-            <div id="bookCategories"></div>
+
+
+            <div class="mt-5" id="bookCategories"></div>
         </div>
     </section>
 
@@ -68,7 +76,7 @@
         <div class="container text-center">
             <h2>Suscríbete a Nuestro Newsletter</h2>
             <p>Recibe novedades, lanzamientos y contenido exclusivo</p>
-            
+
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <form id="newsletterForm" class="d-flex">
@@ -80,55 +88,67 @@
         </div>
     </section>
 
-    
+
     <!-- Sección de Donaciones -->
-<section id="donaciones" class="py-5">
-    <div class="container text-center">
-        <h2 class="mb-5">Apoya Nuestra Editorial</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card bg-dark border-main mb-4">
-                    <div class="card-body">
-                        <h3 class="card-title text-light">Ayúdanos a Seguir Publicando</h3>
-                        <p class="text-light">Cada donación contribuye a que sigamos difundiendo historias únicas e importantes.</p>
-                        
-                        <div class="d-flex justify-content-center gap-3 mt-4">
-                            <!-- PayPal Button -->
-                            <a href="https://paypal.me/tunombredeeditorial" target="_blank" class="btn btn-outline-light hover-effect">
-                                <i class="fab fa-paypal me-2"></i>Donar con PayPal
-                            </a>
-                            
-                            <!-- Mercado Pago Button -->
-                            <a href="https://mpago.la/tuslink" target="_blank" class="btn btn-outline-light hover-effect">
-                                <i class="fab fa-money-bill-wave me-2"></i>Donar con Mercado Pago
-                            </a>
+    <section id="donaciones" class="py-5">
+        <div class="container text-center">
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card bg-dark border-main mb-4">
+                        <div class="card-body">
+                            <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
+                            <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
+                            <p class="text-light">Si nos donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
+                                carpeta
+                                de
+                                drive curada con mas de <b>1500 títulos.</b></p>
+
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <!-- PayPal Button -->
+                                <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
+                                    class="btn btn-outline-light hover-effect">
+                                    <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
+                                </a>
+
+                                <!-- Mercado Pago Button -->
+                                <a target="_blank" class="btn btn-outline-light hover-effect">
+                                    Mercado Pago <br> Alias:
+                                    federico.rosetti
+                                </a>
+                            </div>
+                            <p class="text-light mt-3">(Envianos el comprobante por mail para acceder a la
+                                Biblioteca)
+                            </p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="alert bg-main text-white" role="alert">
-                    <strong>Transparencia:</strong> Todas las donaciones se destinan a la producción, impresión y distribución de nuestros libros.
+
+                    <!-- <div class="alert bg-main text-white" role="alert">
+                    <strong>Gracias</strong> <br>Aguanten los libros
+                </div> -->
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer class="py-5 text-center">
         <div class="container">
             <img src="img/logo.png" alt="Logo Editorial" height="80" class="mb-4">
             <div class="social-links mb-4">
-                <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="mailto:contacto@editorial.com" class="text-light"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-3"><i
+                        class="fab fa-instagram fa-2x"></i></a>
+                <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
+                        class="fas fa-envelope fa-2x"></i></a>
             </div>
-            <p>&copy; 2024 Editorial Independiente. Todos los derechos reservados.</p>
+            <p>&copy; 2025 • Libros Enteogénicos</p>
+            <p>Powered by <a class="text-main" href="">Tuti</a></p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -143,18 +163,18 @@
                 console.error('Error loading books:', error);
             }
         }
-    
+
         function renderBooks(books) {
             const bookCategoriesContainer = document.getElementById('bookCategories');
             bookCategoriesContainer.innerHTML = ''; // Clear previous content
-    
+
             books.forEach(book => {
                 const bookElement = document.createElement('div');
                 bookElement.className = 'col-md-4 mb-4 book-item';
                 bookElement.dataset.title = book.titulo;
                 bookElement.dataset.author = book.autor;
                 bookElement.dataset.tags = book.tags.join(' ');
-    
+
                 bookElement.innerHTML = `
                     <div class="card book-card h-100">
                         <img src="${book.imagen}" class="card-img-top" alt="${book.titulo}">
@@ -168,58 +188,59 @@
                         </div>
                     </div>
                 `;
-    
+
                 bookCategoriesContainer.appendChild(bookElement);
             });
-    
+
             // Add event listeners for summary toggle
             document.querySelectorAll('.toggle-summary').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const card = this.closest('.book-card');
                     const shortSummary = card.querySelector('.short-summary');
                     const fullSummary = card.querySelector('.full-summary');
-                    
+
                     shortSummary.classList.toggle('d-none');
                     fullSummary.classList.toggle('d-none');
-                    
+
                     this.textContent = shortSummary.classList.contains('d-none') ? 'Leer menos' : 'Leer más';
                 });
             });
-    
+
             setupSearch();
         }
-    
+
         function setupSearch() {
             const searchInput = document.getElementById('searchInput');
             const bookItems = document.querySelectorAll('.book-item');
-    
-            searchInput.addEventListener('input', function() {
+
+            searchInput.addEventListener('input', function () {
                 const searchTerm = this.value.toLowerCase();
-                
+
                 bookItems.forEach(item => {
                     const title = item.dataset.title.toLowerCase();
                     const author = item.dataset.author.toLowerCase();
                     const tags = item.dataset.tags.toLowerCase();
-                    
-                    const isVisible = title.includes(searchTerm) || 
-                                       author.includes(searchTerm) || 
-                                       tags.includes(searchTerm);
-                    
+
+                    const isVisible = title.includes(searchTerm) ||
+                        author.includes(searchTerm) ||
+                        tags.includes(searchTerm);
+
                     item.style.display = isVisible ? 'block' : 'none';
                 });
             });
         }
-    
+
         // Newsletter form submission
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const email = this.querySelector('input').value;
             alert(`Gracias por suscribirte con el correo: ${email}`);
             this.reset();
         });
-    
+
         // Load books on page load
         loadBooks();
     </script>
 </body>
+
 </html>

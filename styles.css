@@ -51,6 +51,10 @@ body {
     text-align: center;
 }
 
+.hero-content h1 {
+font-weight: bold;
+}	
+
 .bg-main {
     background-color: var(--main-color) !important;
 }
@@ -61,6 +65,8 @@ body {
 
 .text-main {
     color: var(--main-color) !important;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
@@ -98,6 +104,8 @@ max-width: 350px;
 
 /* Desktop: 3 columns */
 @media (min-width: 992px) {
+
+    #hero 
 .book-item {
 width: calc(33.333% - 20px);
 }
