@@ -7,8 +7,8 @@
 
 /* Custom Cursor */
 body, a, button {
-    cursor: url('img/cursor.png'), auto !important;
-    cursor: url('img/cursor.png') 16 16, auto !important; /* Añade un punto de anclaje central */
+    cursor: url('img/cursor-bg.png'), auto !important;
+    cursor: url('img/cursor-bg.png') 16 16, auto !important; /* Añade un punto de anclaje central */
 } 
 
 body {
