@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
                 </ul>
                 <div class="social-icons ms-3">
-                    <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-2"><i
+                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-2"><i
                             class="fab fa-instagram"></i></a>
                     <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                             class="fas fa-envelope"></i></a>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="hero-content text-center">
                 <h1 class="display-3 mb-4 mt-10 animate-fade-in">Libros Enteogénicos</h1>
-                <p class="lead mb-5 animate-fade-in">Descubre las drogas</p>
+                <p class="lead mb-5 animate-fade-in">Editorial independiente especializada en enteogenicos, chamanismo, drogas y otras hierbas</p>
 
                 <div class="row justify-content-center">
                     <div class="col-md-4 mb-3">
@@ -85,25 +85,24 @@
                         <div class="card-body">
                             <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
                             <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
-                            <p class="text-light">Si nos donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
-                                carpeta
-                                de
-                                drive curada con mas de <b>1500 títulos.</b></p>
-
+                            <p class="text-light">Si donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
+                                carpeta de drive curada con mas de <b>1500 títulos.</b></p>
                             <div class="d-flex justify-content-center gap-3 mt-4">
                                 <!-- PayPal Button -->
                                 <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
                                     class="btn btn-outline-light hover-effect">
                                     <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
                                 </a>
-
                                 <!-- Mercado Pago Button -->
-                                <a target="_blank" class="btn btn-outline-light hover-effect">
+                                <a href="#" onclick="copiarAlias(event)" class="btn btn-outline-light hover-effect">
                                     Mercado Pago <br> Alias:
-                                    federico.rosetti
+                                    <span id="alias">federico.rosetti</span>
                                 </a>
+                                <!-- Mensaje de copiado -->
+                                <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias copiado!</div>
                             </div>
-                            <p class="text-light mt-3">(Envianos el comprobante por mail para acceder a la
+                            <p class="text-light mt-3">(Envianos el comprobante a este <a href="mailto:libros.enteogenicos@gmail.com"
+                                class="text-main">mail</a> para acceder a la
                                 Biblioteca)
                             </p>
                         </div>
@@ -121,8 +120,8 @@
     <!-- Newsletter -->
     <section id="newsletter">
         <div class="container text-center">
-            <h2>Suscríbete a Nuestro Newsletter</h2>
-            <p>Recibe novedades, lanzamientos y contenido exclusivo</p>
+            <h2>Newsletter Enteogénico</h2>
+            <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
 
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -140,7 +139,7 @@
         <div class="container">
             <img src="img/logo.png" alt="Logo Editorial" height="80" class="mb-4">
             <div class="social-links mb-4">
-                <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-3"><i
+                <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-3"><i
                         class="fab fa-instagram fa-2x"></i></a>
                 <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                         class="fas fa-envelope fa-2x"></i></a>
@@ -245,6 +244,23 @@
 
         // Load books on page load
         loadBooks();
+
+
+        // copiar alias
+        function copiarAlias(event) {
+            event.preventDefault(); // Evita que el <a> recargue la página
+            const alias = document.getElementById("alias").innerText;
+            navigator.clipboard.writeText(alias).then(() => {
+            const mensaje = document.getElementById("mensaje");
+            mensaje.style.display = "block";
+            setTimeout(() => {
+                mensaje.style.display = "none";
+            }, 2000);
+            });
+        }
+
+
+
     </script>
 </body>
 

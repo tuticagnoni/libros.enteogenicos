@@ -157,21 +157,7 @@
             margin-bottom: 1rem;
         }
         
-        .btn {
-            display: inline-block;
-            background-color: var(--color-primary);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        
-        .btn:hover {
-            background-color: #238478;
-            transform: translateY(-2px);
-        }
+
         
 
         
@@ -336,7 +322,7 @@
                 <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
             </ul>
             <div class="social-icons ms-3">
-                <a href="https://www.instagram.com/libros.enteogenicos/" class="hvr-icon-grow text-light hover-effect me-2">
+                <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="hvr-icon-grow text-light hover-effect me-2">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="mailto:libros.enteogenicos@gmail.com" class="hvr-icon-grow text-light hover-effect">
@@ -350,16 +336,16 @@
     <!-- Hero -->
     <section class="hero-nosotros animate__animated animate__fadeIn mt-10">
         <div class="container">
-            <h1>Nuestras Actividades</h1>
-            <p>Descubre todas las iniciativas que llevamos adelante para difundir conocimiento, promover la cultura y construir comunidad.</p>
+           <h2>Libros Enteogénico</h2>
+            <p>Descubre todo lo que puede hacer un libro.</p>
         </div>
     </section>
 
     <!-- Sobre la Editorial -->
     <section id="about">
         <div class="container">
-            <div class="section-title fade-in">
-                <h2>Sobre la Editorial</h2>
+            <div class="section-title fade-in mt-10">
+                <h2>El pipo</h2>
             </div>
             <div class="about-content fade-in">
                 <div class="about-text">
@@ -368,11 +354,73 @@
                     <p>Por eso, además de nuestro catálogo editorial, desarrollamos un amplio programa de actividades comunitarias que incluye talleres prácticos, charlas, conferencias y una revista digital que funciona como espacio de experimentación y diálogo.</p>
                 </div>
                 <div class="about-image">
-                    <img src="img/animalesdroga.jpg" alt="Editorial Micelios">
+                    <img src="img/libroloko.jpg" alt="Editorial Micelios">
                 </div>
             </div>
         </div>
     </section>
+
+
+      <!-- Publicaciones -->
+      <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Artículos y Publicaciones</h2>
+            </div>
+            <div class="article-grid">
+                <div class="article-card fade-in">
+                    <a href="https://revistamate.com.ar/2022-03-drogas-capitalistas-y-la-arena-corporadelica/" target="_blank">
+                        <div class="article-image">
+                            <img src="https://revistamate.com.ar/wp-content/uploads/2022/03/anticapi.webp" alt="Artículo sobre micología">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Leer Articulo</span>
+                            <h3 class="article-title">Drogas capitalistas y la arena corporadélica</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="article-card fade-in">
+                    <a href="https://revistamate.com.ar/animales-que-se-drogan/" target="_blank">
+                        <div class="article-image">
+                            <img src="https://revistamate.com.ar/wp-content/uploads/2023/06/animaux3.webp" alt="">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Revista Mate</span>
+                            <h3 class="article-title">Animales que se drogan</h3>
+                        </div>
+                    </a>
+                </div>
+               
+                <div class="article-card fade-in">
+                    <a href="https://revistamate.com.ar/ayahuasca-de-la-selva-a-la-farmacia/" target="_blank"> 
+                    <div class="article-image">
+                        <img src="https://revistamate.com.ar/wp-content/uploads/2023/05/pharmahuasca-opti.jpg" alt="">
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">Revista Mate</span>
+                        <h3 class="article-title">Ayahuasca: De la selva a la farmacia</h3>
+                    </div>
+                </a>
+                </div>
+      
+                <div class="article-card fade-in" href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/">
+                    <a href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/" target="_blank">
+                        <div class="article-image">
+                            <img src="https://revistamate.com.ar/wp-content/uploads/2020/10/1920x1100-1-min.jpg" alt="">
+                        </div>
+                        <div class="article-content">
+                            <!-- <span class="article-category">Leer Articulo</span> -->
+                            <h3 class="article-title">Salvia Divinorum, Miley Cyrus & Hamilton's Pharmacopheia</h3>
+                            <a href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/"
+                            target="_blank" class="btn">Leer Articulo</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="https://www.revistamate.com.ar/author/enteogenicos/" target="_blank" class="btn view-all-btn fade-in">Ver todos los artículos</a>
+        </div>
+    </section>
+
 
     <!-- Talleres -->
     <section id="workshops" class="workshops">
@@ -383,32 +431,42 @@
             <div class="card-container">
                 <div class="card fade-in">
                     <div class="card-image">
-                        <img src="img/yage.png" alt="Taller de cultivo de hongos">
+                        <img src="img/libroconbarbijo.png" alt="Taller de cultivo de hongos">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Cultivo de Hongos Comestibles</h3>
-                        <p class="card-text">Aprende a cultivar champiñones, shiitake y otras variedades en casa usando técnicas sencillas y accesibles.</p>
-                        <a href="#" class="btn">Ver próximas fechas</a>
+                        <h3 class="card-title"><b>Cultivo Fungi</b></h3>
+                        <p class="card-text">Alto taller sobre cultivo de hongos psilocibes.</p>
+                   
                     </div>
                 </div>
                 <div class="card fade-in">
                     <div class="card-image">
-                        <img src="img/yage.png" alt="Taller de cultivo de hongos medicinales">
+                        <img src="img/libroseñala.jpg" alt="Taller de cultivo de hongos medicinales">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Hongos Medicinales</h3>
-                        <p class="card-text">Descubre las propiedades medicinales de los hongos y cómo incorporarlos a tu vida cotidiana de forma segura.</p>
-                        <a href="#" class="btn">Ver próximas fechas</a>
+                        <h3 class="card-title"><b>Del chamanismo amerindio al capitalismo psicodélico</b></h3>
+                        <p class="card-text">Desde maria sabina a las patentes psicodelicas</p>
+                        <!-- <a href="#" class="btn">Ver próximas fechas</a> -->
                     </div>
                 </div>
                 <div class="card fade-in">
                     <div class="card-image">
-                        <img src="img/yage.png" alt="Taller de micelios y compostaje">
+                        <img src="img/libroseñala.jpg" alt="">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">Micelios y Compostaje</h3>
-                        <p class="card-text">Aprende cómo los hongos pueden ayudar en la regeneración de suelos y la descomposición de residuos orgánicos.</p>
-                        <a href="#" class="btn">Ver próximas fechas</a>
+                        <h3 class="card-title"><b>Charla fungica en Cordoba</b></h3>
+                        <p class="card-text">...</p>
+                        <a href="#" class="btn">Ver</a>
+                    </div>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">
+                        <img src="img/masalladelhongo.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><b>Entrevista en mas alla del chamignon</b></h3>
+                        <p class="card-text">...</p>
+                        <a href="#" class="btn">Ver</a>
                     </div>
                 </div>
             </div>
@@ -419,7 +477,7 @@
     <section id="talks" class="talks">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Charlas y Conferencias</h2>
+                <h2>Proximamente</h2>
             </div>
             <div class="talks-container">
                 <div class="talk-item fade-in">
@@ -459,54 +517,7 @@
         </div>
     </section>
 
-    <!-- Publicaciones -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Artículos y Publicaciones</h2>
-            </div>
-            <div class="article-grid">
-                <div class="article-card fade-in">
-                    <div class="article-image">
-                        <img src="https://revistamate.com.ar/wp-content/uploads/2022/03/anticapi.webp" alt="Artículo sobre micología">
-                    </div>
-                    <div class="article-content">
-                        <span class="article-category">Leer Articulo</span>
-                        <h3 class="article-title">Drogas capitalistas y la arena corporadélica</h3>
-                    </div>
-                </div>
-                <div class="article-card fade-in">
-                    <div class="article-image">
-                        <img src="https://revistamate.com.ar/wp-content/uploads/2023/06/animaux3.webp" alt="Artículo sobre permacultura">
-                    </div>
-                    <div class="article-content">
-                        <span class="article-category">Leer Articulo</span>
-                        <h3 class="article-title">Animales que se drogan</h3>
-                    </div>
-                </div>
-                <div class="article-card fade-in">
-                    <div class="article-image">
-                        <img src="https://revistamate.com.ar/wp-content/uploads/2023/05/pharmahuasca-opti.jpg" alt="Artículo sobre fermentación">
-                    </div>
-                    <div class="article-content">
-                        <span class="article-category">Leer Articulo</span>
-                        <h3 class="article-title">Ayahuasca: De la selva a la farmacia</h3>
-                    </div>
-                </div>
-                <div class="article-card fade-in" href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/">
-                    <div class="article-image">
-                        <img src="https://revistamate.com.ar/wp-content/uploads/2020/10/1920x1100-1-min.jpg" alt="Artículo sobre biofilia">
-                    </div>
-                    <div class="article-content">
-                        <span class="article-category">Leer Articulo</span>
-                        <h3 class="article-title">Salvia Divinorum, Miley Cyrus & Hamilton's Pharmacopheia</h3>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn view-all-btn fade-in">Ver todos los artículos</a>
-        </div>
-    </section>
-
+  
     <!-- Galería -->
     <section id="gallery" class="gallery">
         <div class="container">
@@ -536,12 +547,71 @@
         </div>
     </section>
 
+
+    <!-- Sección de Donaciones -->
+    <section id="donaciones" class="py-5">
+        <div class="container text-center">
+            <!-- <h2 class="mb-3">¿Te gusta lo que hacemos?</h2> -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card bg-dark border-main mb-4">
+                        <div class="card-body">
+                            <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
+                            <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
+                            <p class="text-light">Si donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
+                                carpeta de drive curada con mas de <b>1500 títulos.</b></p>
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <!-- PayPal Button -->
+                                <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
+                                    class="btn btn-outline-light hover-effect">
+                                    <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
+                                </a>
+                                <!-- Mercado Pago Button -->
+                                <a href="#" onclick="copiarAlias(event)" class="btn btn-outline-light hover-effect">
+                                    Mercado Pago <br> Alias:
+                                    <span id="alias">federico.rosetti</span>
+                                </a>
+                                <!-- Mensaje de copiado -->
+                                <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias copiado!</div>
+                            </div>
+                            <p class="text-light mt-3">(Envianos el comprobante a este <a href="mailto:libros.enteogenicos@gmail.com"
+                                class="text-main">mail</a> para acceder a la
+                                Biblioteca)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="alert bg-main text-white" role="alert">
+                        <strong>Gracias</strong> <br>Aguanten los libros
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <div class="container text-center">
+                <h2>Newsletter Enteogénico</h2>
+                <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
+    
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form id="newsletterForm" class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="btn btn-light">Suscribirme</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!-- Footer -->
     <footer class="py-5 text-center">
         <div class="container">
             <img src="img/logo.png" alt="Logo Editorial" height="80" class="mb-4">
             <div class="social-links mb-4">
-                <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-3"><i
+                <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-3"><i
                         class="fab fa-instagram fa-2x"></i></a>
                 <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                         class="fas fa-envelope fa-2x"></i></a>
@@ -585,10 +655,6 @@
                 alert('Reproduciendo video... (Esta es una simulación)');
             });
             
-            // Simulación de clic en los artículos
-            $('.article-card').click(function() {
-                alert('Redirigiendo al artículo completo... (Esta es una simulación)');
-            });
         });
     </script>
 </body>

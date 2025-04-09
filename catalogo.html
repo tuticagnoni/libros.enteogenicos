@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
                 </ul>
                 <div class="social-icons ms-3">
-                    <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-2"><i
+                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-2"><i
                             class="fab fa-instagram"></i></a>
                     <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                             class="fas fa-envelope"></i></a>
@@ -71,72 +71,71 @@
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section id="newsletter">
-        <div class="container text-center">
-            <h2>Suscríbete a Nuestro Newsletter</h2>
-            <p>Recibe novedades, lanzamientos y contenido exclusivo</p>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form id="newsletterForm" class="d-flex">
-                        <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
-                        <button type="submit" class="btn btn-light">Suscribirme</button>
-                    </form>
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <div class="container text-center">
+                <h2>Newsletter Enteogénico</h2>
+                <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
+    
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form id="newsletterForm" class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
+                            <button type="submit" class="btn btn-light">Suscribirme</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Sección de Donaciones -->
-    <section id="donaciones" class="py-5">
-        <div class="container text-center">
-
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card bg-dark border-main mb-4">
-                        <div class="card-body">
-                            <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
-                            <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
-                            <p class="text-light">Si nos donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
-                                carpeta
-                                de
-                                drive curada con mas de <b>1500 títulos.</b></p>
-
-                            <div class="d-flex justify-content-center gap-3 mt-4">
-                                <!-- PayPal Button -->
-                                <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
-                                    class="btn btn-outline-light hover-effect">
-                                    <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
-                                </a>
-
-                                <!-- Mercado Pago Button -->
-                                <a target="_blank" class="btn btn-outline-light hover-effect">
-                                    Mercado Pago <br> Alias:
-                                    federico.rosetti
-                                </a>
-                            </div>
-                            <p class="text-light mt-3">(Envianos el comprobante por mail para acceder a la
-                                Biblioteca)
-                            </p>
+  <!-- Sección de Donaciones -->
+  <section id="donaciones" class="py-5">
+    <div class="container text-center">
+        <!-- <h2 class="mb-3">¿Te gusta lo que hacemos?</h2> -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-dark border-main mb-4">
+                    <div class="card-body">
+                        <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
+                        <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
+                        <p class="text-light">Si donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
+                            carpeta de drive curada con mas de <b>1500 títulos.</b></p>
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <!-- PayPal Button -->
+                            <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
+                                class="btn btn-outline-light hover-effect">
+                                <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
+                            </a>
+                            <!-- Mercado Pago Button -->
+                            <a href="#" onclick="copiarAlias(event)" class="btn btn-outline-light hover-effect">
+                                Mercado Pago <br> Alias:
+                                <span id="alias">federico.rosetti</span>
+                            </a>
+                            <!-- Mensaje de copiado -->
+                            <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias copiado!</div>
                         </div>
+                        <p class="text-light mt-3">(Envianos el comprobante a este <a href="mailto:libros.enteogenicos@gmail.com"
+                            class="text-main">mail</a> para acceder a la
+                            Biblioteca)
+                        </p>
                     </div>
+                </div>
 
-                    <!-- <div class="alert bg-main text-white" role="alert">
+                <!-- <div class="alert bg-main text-white" role="alert">
                     <strong>Gracias</strong> <br>Aguanten los libros
                 </div> -->
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="py-5 text-center">
         <div class="container">
             <img src="img/logo.png" alt="Logo Editorial" height="80" class="mb-4">
             <div class="social-links mb-4">
-                <a href="https://www.instagram.com/libros.enteogenicos/" class="text-light me-3"><i
+                <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-3"><i
                         class="fab fa-instagram fa-2x"></i></a>
                 <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                         class="fas fa-envelope fa-2x"></i></a>
