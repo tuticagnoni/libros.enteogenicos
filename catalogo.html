@@ -193,7 +193,7 @@
                             <p class="card-text">${book.añoPublicacion} • ${book.paginas} páginas</p>
                             <p class="card-text short-summary">${book.resumenCorto}</p>
                             <p class="card-text full-summary d-none">${book.resumenCompleto}</p>
-                            <button class="btn btn-view-more">Leer más</button>
+                            <button class="btn btn-view-more ">Leer más</button>
                         </div>
                     </div>
                 `;
@@ -202,7 +202,7 @@
             });
 
             // Add event listeners for summary toggle
-            document.querySelectorAll('.toggle-summary').forEach(button => {
+            document.querySelectorAll('.btn-view-more').forEach(button => {
                 button.addEventListener('click', function () {
                     const card = this.closest('.book-card');
                     const shortSummary = card.querySelector('.short-summary');
