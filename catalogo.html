@@ -26,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#donaciones">Donaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
@@ -44,7 +44,7 @@
 
     <!-- Catálogo -->
     <section id="catalogo" class="py-5">
-        <div class="container">
+        <div class="container section-title">
             <h2 class="text-center mb-5 mt-10">Nuestro Catálogo</h2>
 
             <div class="row mb-4">
@@ -57,10 +57,16 @@
             <!-- Información de Pedidos -->
             <section id="pedidos" class="bg-dark py-4 text-center">
                 <div class="container">
-                    <p class="text-light mb-0">
+                    <h4 class="text-light mb-0">
                         Pedidos y consultas »
                         <a href="mailto:libros.enteogenicos@gmail.com"
                             class="text-main"><b>libros.enteogenicos@gmail.com</b></a>
+                    </h4>
+                </div>
+                <br>
+                <div class="container">
+                    <p>Todos los libros son cosidos a mano, guillotinados, impresos y encuadernados en casa. <br>Tapas
+                        duras y semiduras. Costura clásica (española) y japonesa (expuesta). <br>Tamaño de páginas A5.
                     </p>
                 </div>
             </section>
@@ -71,64 +77,67 @@
         </div>
     </section>
 
-        <!-- Newsletter -->
-        <section id="newsletter">
-            <div class="container text-center">
-                <h2>Newsletter Enteogénico</h2>
-                <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
-    
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form id="newsletterForm" class="d-flex">
-                            <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
-                            <button type="submit" class="btn btn-light">Suscribirme</button>
-                        </form>
-                    </div>
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="container text-center">
+            <h2>Newsletter Enteogénico</h2>
+            <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="newsletterForm" class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-light">Suscribirme</button>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-
-  <!-- Sección de Donaciones -->
-  <section id="donaciones" class="py-5">
-    <div class="container text-center">
-        <!-- <h2 class="mb-3">¿Te gusta lo que hacemos?</h2> -->
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card bg-dark border-main mb-4">
-                    <div class="card-body">
-                        <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
-                        <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
-                        <p class="text-light">Si donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
-                            carpeta de drive curada con mas de <b>1500 títulos.</b></p>
-                        <div class="d-flex justify-content-center gap-3 mt-4">
-                            <!-- PayPal Button -->
-                            <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
-                                class="btn btn-outline-light hover-effect">
-                                <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
-                            </a>
-                            <!-- Mercado Pago Button -->
-                            <a href="#" onclick="copiarAlias(event)" class="btn btn-outline-light hover-effect">
-                                Mercado Pago <br> Alias:
-                                <span id="alias">federico.rosetti</span>
-                            </a>
-                            <!-- Mensaje de copiado -->
-                            <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias copiado!</div>
-                        </div>
-                        <p class="text-light mt-3">(Envianos el comprobante a este <a href="mailto:libros.enteogenicos@gmail.com"
-                            class="text-main">mail</a> para acceder a la
-                            Biblioteca)
-                        </p>
-                    </div>
-                </div>
-
-                <!-- <div class="alert bg-main text-white" role="alert">
-                    <strong>Gracias</strong> <br>Aguanten los libros
-                </div> -->
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+    <!-- Sección de Donaciones -->
+    <section id="donaciones" class="py-5">
+        <div class="container text-center">
+            <!-- <h2 class="mb-3">¿Te gusta lo que hacemos?</h2> -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card bg-dark border-main mb-4">
+                        <div class="card-body">
+                            <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
+                            <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
+                            <p class="text-light">Si donas tenes acceso a la <b>Biblioteca Enteogénica.</b> <br>Una
+                                carpeta de drive curada con mas de <b>1500 títulos.</b></p>
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <!-- PayPal Button -->
+                                <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
+                                    class="btn view-all-btn fade-in">
+                                    <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
+                                </a>
+                                <!-- Mercado Pago Button -->
+                                <a href="#" onclick="copiarAlias(event)" class="btn view-all-btn fade-in">
+                                    Mercado Pago <br> Alias:
+                                    <span id="alias">federico.rosetti</span>
+                                </a>
+                                <!-- Mensaje de copiado -->
+                                <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias
+                                    copiado!</div>
+                            </div>
+                            <p class="text-light mt-3">(Envianos el comprobante a este <a
+                                    href="mailto:libros.enteogenicos@gmail.com" class="text-main">mail</a>:
+                                libros.enteogenicos@gmail.com para acceder
+                                a la
+                                Biblioteca)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="alert bg-main text-white" role="alert">
+                    <strong>Gracias</strong> <br>Aguanten los libros
+                </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="py-5 text-center">
@@ -184,7 +193,7 @@
                             <p class="card-text">${book.añoPublicacion} • ${book.paginas} páginas</p>
                             <p class="card-text short-summary">${book.resumenCorto}</p>
                             <p class="card-text full-summary d-none">${book.resumenCompleto}</p>
-                            <button class="btn btn-sm btn-outline-light toggle-summary hover-effect">Leer más</button>
+                            <button class="btn btn-view-more">Leer más</button>
                         </div>
                     </div>
                 `;

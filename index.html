@@ -8,10 +8,167 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>Libros Enteogénicos</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css para animaciones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .about-image:hover {
+            transform: scale(1.03);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--color-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+
+
+
+
+        .talk-item {
+            display: flex;
+            margin-bottom: 2rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .talk-image {
+            flex: 0 0 30%;
+        }
+
+        .talk-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .talk-content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+
+        .talk-date {
+            color: var(--color-secondary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .talk-item {
+                flex-direction: column;
+            }
+
+            .talk-image {
+                flex: 0 0 200px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .nav-links li {
+                margin: 0 0.7rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -26,31 +183,71 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#donaciones">Donaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
                 </ul>
                 <div class="social-icons ms-3">
-                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-2"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
-                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank"
+                        class="hvr-icon-grow text-light hover-effect me-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:libros.enteogenicos@gmail.com" class="hvr-icon-grow text-light hover-effect">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Hero -->
+    <section class="hero-nosotros animate__animated animate__fadeIn mt-10">
+        <div class="container">
+            <h2>Libros Enteogénicos</h2>
+            <p>Editorial independiente especializada en enteógenos, chamanismo,
+                drogas y otras hierbas</p>
+        </div>
+    </section>
+
+    <!-- Sobre la Editorial -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <p><b>Libros Enteogénicos</b> es una editorial artesanal alternativa fundada en 2017, especializada
+                        en
+                        textos de
+                        cultura y ciencia psicodélica, chamanismos y enteógenos, políticas de drogas y
+                        perspectivas antipunitivas- antiprohibicionistas.</p>
+                    <p>Conecta transversalmente antropología, farmacología, psicología, filosofía e historia,
+                        buscando llevar a las manos del lector títulos dificiles de conseguir a un costo accesible.</p>
+                    <p>Además, escribimos artículos en Revista Mate. Hemos organizado y participado de
+                        conversatorios sobre cultivo, historia y usos de hongos en varias ciudades del país. </p>
+                    <p>También
+                        participamos de eventos de índole académica, como las Jornadas Internacionales sobre Cannabis,
+                        Enteogenos y Politica de Drogas (UNQ 2023) las Jornadas sobre Psilocibina y Salud Mental (UNC
+                        2024) y el Congreso Universitario de Sustancias Psicoactivas (UNAM) en dos oportunidades (2020 y
+                        2021).
+
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="img/libroseñala.jpg" alt="Editorial Micelios">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
-            <div class="hero-content text-center">
-                <h1 class="display-3 mb-4 mt-10 animate-fade-in">Libros Enteogénicos</h1>
-                <p class="lead mb-5 animate-fade-in">Editorial independiente especializada en enteogenicos, chamanismo, drogas y otras hierbas</p>
+            <div class="hero-content text-center section-title">
+                <h2 class="mb-5">Nuestros libros</h2>
 
                 <div class="row justify-content-center">
                     <div class="col-md-4 mb-3">
-                        <img src="img/libro1.jpg" class="img-fluid rounded animate-fade-in" alt="Ilustración 1">
+                        <img src="img/manjar-edit.jpg" class="img-fluid rounded animate-fade-in" alt="Ilustración 1">
                     </div>
                     <div class="col-md-4 mb-3">
                         <img src="img/libro2.jpg" class="img-fluid rounded animate-fade-in" alt="Ilustración 2">
@@ -58,20 +255,171 @@
                     <div class="col-md-4 mb-3">
                         <img src="img/libro3.jpg" class="img-fluid rounded animate-fade-in" alt="Ilustración 3">
                     </div>
+                    <a href="/catalogo.html" class="btn view-all-btn fade-in"><b>Ir al Catálogo</b></a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Información de Pedidos -->
-    <section id="pedidos" class="bg-dark py-4 text-center">
+    <!-- Publicaciones -->
+    <section id="publications" class="publications">
         <div class="container">
-            <p class="text-light mb-0">
-                Pedidos y consultas »
-                <a href="mailto:libros.enteogenicos@gmail.com"
-                    class="text-main"><b>libros.enteogenicos@gmail.com</b></a>
-            </p>
+            <div class="section-title ">
+                <h2>Publicaciones</h2>
+            </div>
+            <div class="article-grid">
+                <div class="article-card">
+                    <a href="https://revistamate.com.ar/2022-03-drogas-capitalistas-y-la-arena-corporadelica/"
+                        target="_blank">
+                        <div class="article-image">
+                            <img src="img/anticapi.webp" alt="Artículo sobre micología">
+                        </div>
+                        <div class="article-content">
+
+                            <h3 class="article-title">Drogas capitalistas y la arena corporadélica</h3>
+                            <a href="https://revistamate.com.ar/2022-03-drogas-capitalistas-y-la-arena-corporadelica/"
+                                target="_blank" class="btn">Leer Articulo</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="article-card fade-in">
+                    <a href="https://revistamate.com.ar/animales-que-se-drogan/" target="_blank">
+                        <div class="article-image">
+                            <img src="img/animales.webp" alt="">
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Animales que se drogan</h3>
+                            <a href="https://revistamate.com.ar/animales-que-se-drogan/" target="_blank"
+                                class="btn">Leer Articulo</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="article-card fade-in">
+                    <a href="https://revistamate.com.ar/ayahuasca-de-la-selva-a-la-farmacia/" target="_blank">
+                        <div class="article-image">
+                            <img src="img/pharmahuasca-opti.webp" alt="">
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Ayahuasca: De la selva a la farmacia</h3>
+                            <a href="https://revistamate.com.ar/ayahuasca-de-la-selva-a-la-farmacia/" target="_blank"
+                                class="btn">Leer Articulo</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="article-card fade-in"
+                    href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/">
+                    <a href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/"
+                        target="_blank">
+                        <div class="article-image">
+                            <img src="img/1920x1100-1-min.webp" alt="">
+                        </div>
+                        <div class="article-content">
+                            <!-- <span class="article-category">Leer Articulo</span> -->
+                            <h3 class="article-title">Salvia Divinorum, Miley Cyrus & Hamilton's Pharmacopheia</h3>
+                            <a href="https://revistamate.com.ar/salvia-divinorum-miley-cyrus-hamiltons-pharmacopheia/"
+                                target="_blank" class="btn">Leer Articulo</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="https://www.revistamate.com.ar/author/enteogenicos/" target="_blank" class="btn view-all-btn">Ver
+                todas las publicaciones</a>
+        </div>
+    </section>
+
+
+    <!-- Talleres -->
+    <section id="workshops" class="workshops">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Otros Actives</h2>
+            </div>
+            <div class="card-container">
+                <div class="card fade-in">
+                    <div class="card-image">
+                        <img src="img/jornadasfungicas.jpg" alt="Taller de cultivo de hongos">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><b>Jornadas Fungicas del Litoral</b></h3>
+
+                        <p class="card-text">Un espacio para conversar sobre historia, cultivo y reducción de riesgos en
+                            el
+                            uso de honguitos junto a <a href="https://www.instagram.com/revistamate/" target="_blank"
+                                style="text-decoration: none; color: #228B14;"><b>Revista Mate</b></a>.</p>
+                        <a href="https://revistamate.com.ar/hongos-psilocibios-jornadas-fungicas-litoral/"
+                            target="_blank" target="_blank" class="btn">Ver más</a>
+
+                    </div>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">
+                        <img src="img/venenosaremedio.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><b>De venenos a remedios</b>
+                        </h3>
+                        <p class="card-text">Del chamanismo mazateca al capitalismo psicodélico. <br>El uso de la
+                            psilocibina en salud mental. Facultad de Psicología de Córdoba • 2024
+                        </p>
+                        <a href="https://www.youtube.com/live/MDcs7rqLRlA?t=2032s" target="_blank" class="btn">Ver
+                            más</a>
+                    </div>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-image">
+                        <img src="img/masalladelhongo.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><b>Entrevista en más allá del champignon</b></h3>
+                        <p class="card-text">Capitalismo Psicodélico: ¿Quién controla los Enteógenos?</p>
+                        <a href="https://youtu.be/951zRQ4pq68?si=0TNH4XyRmqvU6AXe" target="_blank" class="btn">Ver
+                            más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charlas y Conferencias 
+    <section id="talks" class="talks">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Proximamente</h2>
+            </div>
+            <div class="talks-container">
+                <div class="talk-item fade-in">
+                    <div class="talk-image">
+                        <img src="img/default.jpg" alt="Conferencia sobre ecología">
+                    </div>
+                    <div class="talk-content">
+                        <span class="talk-date">Mayo, 2025</span>
+                        <h3 class="card-title">Colapso</h3>
+                        <p class="card-text">Anticapitalismo explicito, chetos cuidado!</p>
+                        <a href="" class="btn">Más información</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="container text-center">
+            <h2>Newsletter Enteogénico</h2>
+            <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="newsletterForm" class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-light">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -90,49 +438,45 @@
                             <div class="d-flex justify-content-center gap-3 mt-4">
                                 <!-- PayPal Button -->
                                 <a href="https://www.paypal.com/paypalme/librosenteogenicos" target="_blank"
-                                    class="btn btn-outline-light hover-effect">
+                                    class="btn view-all-btn">
                                     <i class="fab fa-paypal me-2"></i><br>Donar con PayPal
                                 </a>
                                 <!-- Mercado Pago Button -->
-                                <a href="#" onclick="copiarAlias(event)" class="btn btn-outline-light hover-effect">
+                                <a href="#" onclick="copiarAlias(event)" class="btn view-all-btn fade-in">
                                     Mercado Pago <br> Alias:
                                     <span id="alias">federico.rosetti</span>
                                 </a>
                                 <!-- Mensaje de copiado -->
-                                <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias copiado!</div>
+                                <div id="mensaje" style="display:none; color:lightgreen; margin-top: 10px;">¡Alias
+                                    copiado!</div>
                             </div>
-                            <p class="text-light mt-3">(Envianos el comprobante a este <a href="mailto:libros.enteogenicos@gmail.com"
-                                class="text-main">mail</a> para acceder a la
+                            <p class="text-light mt-3">(Envianos el comprobante a este <a
+                                    href="mailto:libros.enteogenicos@gmail.com" class="text-main">mail</a>:
+                                libros.enteogenicos@gmail.com para acceder
+                                a la
                                 Biblioteca)
                             </p>
                         </div>
                     </div>
-
                     <!-- <div class="alert bg-main text-white" role="alert">
-                        <strong>Gracias</strong> <br>Aguanten los libros
-                    </div> -->
+                            <strong>Gracias</strong> <br>Aguanten los libros
+                        </div> -->
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Newsletter -->
-    <section id="newsletter">
-        <div class="container text-center">
-            <h2>Newsletter Enteogénico</h2>
-            <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
-
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form id="newsletterForm" class="d-flex">
-                        <input type="email" class="form-control me-2" placeholder="Tu correo electrónico" required>
-                        <button type="submit" class="btn btn-light">Suscribirme</button>
-                    </form>
-                </div>
-            </div>
+    <!-- Información de Pedidos -->
+    <section id="pedidos" class="bg-dark py-4 text-center mb-5">
+        <div class="container">
+            <p class="text-light mb-0">
+                Pedidos y consultas »
+                <a href="mailto:libros.enteogenicos@gmail.com"
+                    class="text-main"><b>libros.enteogenicos@gmail.com</b></a>
+            </p>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="py-5 text-center">
@@ -149,119 +493,14 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <script>
-        // Fetch libros.json and render books
-        async function loadBooks() {
-            try {
-                const response = await fetch('libros.json');
-                const books = await response.json();
-                renderBooks(books);
-            } catch (error) {
-                console.error('Error loading books:', error);
-            }
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-        function renderBooks(books) {
-            const bookCategoriesContainer = document.getElementById('bookCategories');
-            bookCategoriesContainer.innerHTML = ''; // Clear previous content
-
-            books.forEach(book => {
-                const bookElement = document.createElement('div');
-                bookElement.className = 'col-md-4 mb-4 book-item';
-                bookElement.dataset.title = book.titulo;
-                bookElement.dataset.author = book.autor;
-                bookElement.dataset.tags = book.tags.join(' ');
-
-                bookElement.innerHTML = `
-                    <div class="card book-card h-100">
-                        <img src="${book.imagen}" class="card-img-top" alt="${book.titulo}">
-                        <span class="book-category-tag">${book.categoria}</span>
-                        <div class="card-body">
-                            <h5 class="card-title">${book.titulo}</h5>
-                            <p class="card-text">${book.autor}</p>
-
-                            <p class="card-text short-summary">${book.resumenCorto}</p>
-                            <p class="card-text full-summary d-none">${book.resumenCompleto}</p>
-                            <button class="btn btn-sm btn-outline-light toggle-summary hover-effect">Leer más</button>
-                        </div>
-                    </div>
-                `;
-
-                bookCategoriesContainer.appendChild(bookElement);
-            });
-
-            // Add event listeners for summary toggle
-            document.querySelectorAll('.toggle-summary').forEach(button => {
-                button.addEventListener('click', function () {
-                    const card = this.closest('.book-card');
-                    const shortSummary = card.querySelector('.short-summary');
-                    const fullSummary = card.querySelector('.full-summary');
-
-                    shortSummary.classList.toggle('d-none');
-                    fullSummary.classList.toggle('d-none');
-
-                    this.textContent = shortSummary.classList.contains('d-none') ? 'Leer menos' : 'Leer más';
-                });
-            });
-
-            setupSearch();
-        }
-
-        function setupSearch() {
-            const searchInput = document.getElementById('searchInput');
-            const bookItems = document.querySelectorAll('.book-item');
-
-            searchInput.addEventListener('input', function () {
-                const searchTerm = this.value.toLowerCase();
-
-                bookItems.forEach(item => {
-                    const title = item.dataset.title.toLowerCase();
-                    const author = item.dataset.author.toLowerCase();
-                    const tags = item.dataset.tags.toLowerCase();
-
-                    const isVisible = title.includes(searchTerm) ||
-                        author.includes(searchTerm) ||
-                        tags.includes(searchTerm);
-
-                    item.style.display = isVisible ? 'block' : 'none';
-                });
-            });
-        }
-
-        // Newsletter form submission
-        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = this.querySelector('input').value;
-            alert(`Gracias por suscribirte con el correo: ${email}`);
-            this.reset();
-        });
-
-        // Load books on page load
-        loadBooks();
-
-
-        // copiar alias
-        function copiarAlias(event) {
-            event.preventDefault(); // Evita que el <a> recargue la página
-            const alias = document.getElementById("alias").innerText;
-            navigator.clipboard.writeText(alias).then(() => {
-            const mensaje = document.getElementById("mensaje");
-            mensaje.style.display = "block";
-            setTimeout(() => {
-                mensaje.style.display = "none";
-            }, 2000);
-            });
-        }
-
-
-
-    </script>
 </body>
 
 </html>
