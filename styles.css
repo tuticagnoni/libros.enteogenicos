@@ -129,8 +129,9 @@ width: calc(33.333% - 20px);
 }
 
 .book-card img {
-    max-height: 400px;
+    max-height: auto;
     object-fit: cover;
+    object-position: top;
 }
 
 /* Newsletter */

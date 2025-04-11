@@ -9,7 +9,7 @@
         "resumenCorto": "Tesis doctoral de literatura, donde se analiza las implicancias pragmáticas y cotidianas de mitos, cuentos, cantos y ritos de distintas etnias amazónicas, cuya constante es el diálogo permanente con los espíritus, y las medicinas visionarias.",
         "resumenCompleto": "Tesis doctoral de literatura, donde se analiza las implicancias pragmáticas y cotidianas de mitos, cuentos, cantos y ritos de distintas etnias amazónicas, cuya constante es el diálogo permanente con los espíritus, y las medicinas visionarias. <br> <b>Pedro Favaron</b> no sólo es académico, docente, y director de la unidad de investigación en Ciencias Sociales de la Universidad de Ucayali, Perú, también integrante de la comunidad Shipibo Konibo de Santa Clara, en la cual se inició y oficia como médico visionario, y donde fundó la clínica Nishi Nete. Con este libro, nos acercamos a la medicina amazónica-ayahuasquera de la mano de un chamán e intelectual a la vez.",
         "tags": ["amazonia", "ayahuasca", "chamanismo", "shipibo", "antropologia", "yage"],
-        "imagen": "img/visiones.jpg"
+        "imagen": "img/visiones.png"
     },
     {
         "id": "articulos",
@@ -21,7 +21,7 @@
         "resumenCorto": "Edición encomendada por Centro Takiwasi, dirigido por el dr. Jacques Mabit.  Reune distintos artículos seleccionados por la institución, que dan cuenta de la complejidad y riqueza de la medicina tradicional amazónica, y de su potencial terapéutico en nuestra cultura.",
         "resumenCompleto": "Edición encomendada por Centro Takiwasi, dirigido por el dr. Jacques Mabit.  Reune distintos artículos seleccionados por la institución, que dan cuenta de la complejidad y riqueza de la medicina tradicional amazónica, y de su potencial terapéutico en nuestra cultura.<br> <b>Jacques Mabit</b>  es un médico francés, fundador del este Centro Terapéutico, para el tratamiento y rehabilitación de toxicómanxs. Allí se llevan a cabo terapias y procesos de trabajo interior con técnicas de psicoterapia occidental y de medicina amazónica, con uso de plantas visionarias. Jacques está hace más de 30 años en la selva, donde se inició y aprendió guiado por maestros curanderos.",
         "tags": ["takiwasi", "amazonía", "terapia", "plantas-visionarias", "etnobotánica", "cannabis", "coca", "tabaco", "ayahuasca"],
-        "imagen": "img/plantasmedicina.jpeg"
+        "imagen": "img/plantasmedicina.png"
     },
     {
         "id": "plantas-medicina",
@@ -45,7 +45,7 @@
         "resumenCorto": "Obra concebida en México, publicada en 2019 por Lunaria Ediciones, que llega a nuestras manos en una suerte de intercambio editorial. Reúne una selección de ponencias destacadas, realizadas en el Congreso sobre Sustancias Psicoactivas de la UNAM, organizada por el grupo de investigación multidisciplinar ViaSynapsis.",
         "resumenCompleto": "Obra concebida en México, publicada en 2019 por Lunaria Ediciones, que llega a nuestras manos en una suerte de intercambio editorial. Reúne una selección de ponencias destacadas, realizadas en el Congreso sobre Sustancias Psicoactivas de la UNAM, organizada por el grupo de investigación multidisciplinar ViaSynapsis. <br>Se aborda el fenómeno de las drogas y enteógenos trasversalmente, desde lo político, la filosofía, los nuevos paradigmas científicos, médicos y también desde la antropología. Una obra actual, que nos recuerda qué México es cuna indiscutible de enteógenos y chamanismos en el mundo ",        
         "tags": ["mitos", "medicinas-visionarias", "méxico", "chamanismo"],
-        "imagen": "img/ensayos.jpg"
+        "imagen": "img/ensayos.png"
     },
     {
         "id": "jaguar",
@@ -69,7 +69,7 @@
         "resumenCorto": "Una versión de la evolución del cerebro y la conciencia del homo sapiens, vista a través de las drogas que consumimos. Pone como protagonista al consumo de enteógenos (y  particularmente, los hongos psilocybes) a lo largo de la historia humana. Un imprescindible de las bibliotecas psicodélicas psiconauticas.",
         "resumenCompleto": "Una versión de la evolución del cerebro y la conciencia del homo sapiens, vista a través de las drogas que consumimos. Pone como protagonista al consumo de enteógenos (y  particularmente, los hongos psilocybes) a lo largo de la historia humana. Un imprescindible de las bibliotecas psicodélicas psiconauticas.",        
         "tags":["antropologia","psicodelico","filosofia","psiconautica","dmt","psilocibina"],
-        "imagen": "img/manjar.jpg"
+        "imagen": "img/manjar.png"
     },
     {
         "id": "nueva-consc",
@@ -93,7 +93,7 @@
         "resumenCorto": "Ha llegado la hora de descubrir el oculto y fascinante mundo de los hongos, formas de vida extrañas y maravillosas que nos obligan a repensar el funcionamiento de la vida. <br>",
         "resumenCompleto": "Ha llegado la hora de descubrir el oculto y fascinante mundo de los hongos, formas de vida extrañas y maravillosas que nos obligan a repensar el funcionamiento de la vida. <br> Al proporcionar a los humanos pan, alcohol y medicamentos, han cambiado la historia de nuestra especie, mientras que su capacidad para digerir plástico, explosivos, pesticidas y petróleo crudo se aplica en el campo de las nuevas tecnologías.",        
         "tags":["hongos","filosofia","biologia"],
-        "imagen": "img/redoculta.jpg"
+        "imagen": "img/redoculta.png"
     },
     {
         "id": "serpiente",
@@ -117,7 +117,7 @@
         "resumenCorto": "Cabras cafeinómanas, renos micófilos, pájaros ebrios, hormigas adictas al néctar... la vida salvaje ofrece numerosos ejemplos de animales que buscan y consumen sustancias psicoactivas en su hábitat. <br>",
         "resumenCompleto": "Cabras cafeinómanas, renos micófilos, pájaros ebrios, hormigas adictas al néctar... la vida salvaje ofrece numerosos ejemplos de animales que buscan y consumen sustancias psicoactivas en su hábitat. <br> Giorgio Samorini explora este fenómeno y sugiere que, lejos de ser exclusivo del humano, el deseo de experimentar estados alterados de conciencia es compartido por muchisimos animales de forma natural y deliberada.",
         "tags":["biologia","farmacologia","etologia"],
-        "imagen": "img/animalesdroga.jpg"
+        "imagen": "img/animalesdroga.png"
     },
     {
         "id": "yage",
@@ -153,7 +153,7 @@
         "resumenCorto": "<b>Castañeda</b>  ha logrado consagrarse  como parte de la cultura chamánica pop con esta obra, que fue su tesis antropológica para obtener el título de grado. Claro que aún se desconocía el hecho de que casi todo lo contenido de este libro pasaba más por su imaginación que por un trabajo de campo antropológico real.  Ese no ha sido el único de sus méritos.  <br> ",
         "resumenCompleto": "<b>Castañeda</b>  ha logrado consagrarse  como parte de la cultura chamánica pop con esta obra, que fue su tesis antropológica para obtener el título de grado. Claro que aún se desconocía el hecho de que casi todo lo contenido de este libro pasaba más por su imaginación que por un trabajo de campo antropológico real.  Ese no ha sido el único de sus méritos.  <br> Su trabajo (real, imaginario, ya lo mismo da) ha contribuido a expandir y mantener vivo en nuestra cultura el interés por la antropología de los estados no ordinarios de conciencia, eso sin ninguna duda. Por eso, otro imprescindible de todo iniciante psiconautico.",
         "tags":["antropologia","ficcion","novela","chamanismo","mescalina"],
-        "imagen": "img/donjuan.jpg"
+        "imagen": "img/donjuan.png"
     },
     {
         "id": "puertas-percepcion",
@@ -165,7 +165,7 @@
         "resumenCorto": "Otro clásico que no requiere demasiada presentación, cuyo título remite a la conocida frase de William Blake: “Si las puertas de la percepción estuviesen abiertas, todo se nos mostraría tal cual es: infinito”.  <br>",
         "resumenCompleto": "Otro clásico que no requiere demasiada presentación, cuyo título remite a la conocida frase de William Blake: “Si las puertas de la percepción estuviesen abiertas, todo se nos mostraría tal cual es: infinito”.  <br> Aquí se trata de la novelesca experiencia del escritor Inglés <b>Aldous Huxley</b> con cristales de Mescalina (compuesto activo de cactus como el San Pedro y Peyote) supervisada por el psiquiatra Humpry Osmond (quien acuñara el término “psicodélico”). <br> Indispensable obra que no puede faltar en ninguna biblioteca psicodélica.",
         "tags":["mescalina","psiconautica","psicodelicos","literatura"],
-        "imagen": "img/puertas.jpg"
+        "imagen": "img/puertas.png"
     },
     {
         "id": "lsd",
@@ -189,7 +189,7 @@
         "resumenCorto": "Esta obra se trata de un trabajo transversal e interdisciplinario entre químicos  (Hofmann y Ott) sociólogos  (Fericgla) filósofos (Escohotado)  y expertos multifacéticos (Samorini, al igual que todos los ya mencionados), tocando problemas de la psicología, la arqueología, farmacología y filosofía de los estados ampliados de conciencia, facilitados por sustancias psicodélicas o enteógenas.",
         "resumenCompleto": "Esta obra se trata de un trabajo transversal e interdisciplinario entre químicos  (Hofmann y Ott) sociólogos  (Fericgla) filósofos (Escohotado)  y expertos multifacéticos (Samorini, al igual que todos los ya mencionados), tocando problemas de la psicología, la arqueología, farmacología y filosofía de los estados ampliados de conciencia, facilitados por sustancias psicodélicas o enteógenas.",
         "tags":["farmacologia","psicodelico","enteogeno"],
-        "imagen": "img/csyenteo.jpg"
+        "imagen": "img/csyenteo.png"
     },
     {
         "id": "pharmacophilia",
@@ -201,7 +201,7 @@
         "resumenCorto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda viva, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin).",
         "resumenCompleto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda viva, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin). <br> Pone en disputa, fiel a su estilo ácido, muchos de los lugares comunes y las nociones preconcebidas acerca de la psicodelia y la psiconáutica. Navegando por las olas de la etno-farmacobotánica, el chamanismo y los estados de consciencia alterada, empezando por cuestionar la idea de Baudelaire de 'droga' como 'paraíso artificial'. Abundante en notas, citas, y documentación científica de distintas áreas, esta obra es otra imprescindible en la biblioteca del enteo-lector.",
         "tags":["farmacologia","psicodelico","enteogeno","arqueologia","botanica"],
-        "imagen": "img/pharmacofilia.jpg"
+        "imagen": "img/pharmacofilia.png"
     },
     {
         "id": "derecho-drogas",
@@ -213,7 +213,7 @@
         "resumenCorto": "Lectura tan necesaria como controversial en materia de política de drogas. <b>Thomas Szasz</b>, psiquiatra referente de la anti-psiquiatría, pone en jaque permanentemente los argumentos prohibicionistas. <br>",
         "resumenCompleto": "Lectura tan necesaria como controversial en materia de política de drogas. <b>Thomas Szasz</b>, psiquiatra referente de la anti-psiquiatría, pone en jaque permanentemente los argumentos prohibicionistas. <br> Mas no conforme con abatir la defensa de la ilegalidad y el punitivismo, Szasz también pone en tela de juicio la voluntad de regulación de las sustancias psicoactivas. De un solo golpe, el autor barre tanto los argumentos a favor como en contra de la legalización, abogando por devolverle al sujeto la capacidad de elección y decisión libre, consciente y adulta, de lo que quiera consumir, sin intermediarios.",
         "tags":["politicadedrogas","antipsiquiatria"],
-        "imagen": "img/derecho.bmp"
+        "imagen": "img/derecho.png"
     },
     {
         "id": "teonanacatl",
@@ -237,7 +237,7 @@
         "resumenCorto": "Viaje al corazón de los misterios eleusinos, cuya bebida iniciática, el Kykeon, es desvelada como lo que hoy conocemos como la dietilamida de ácido lisérgico (LSD). <br> ",
         "resumenCompleto": "Viaje al corazón de los misterios eleusinos, cuya bebida iniciática, el Kykeon, es desvelada como lo que hoy conocemos como la dietilamida de ácido lisérgico (LSD). <br> Siguiendo una argumentación lógica en base a datos empíricos, históricos y análisis mitológico, el libro explora los orígenes y secretos de los misterios eleusinos. Es una de las obras producto del descubrimiento de Hofmann de la LSD.",
         "tags":["farmacologia","psicodelico","enteogeno"],
-        "imagen": "img/eleusis.jpg"
+        "imagen": "img/eleusis.png"
     },
     {
         "id": "retorno",
@@ -249,6 +249,6 @@
         "resumenCorto": "Un libro que no habla técnicamente de enteógenos, pero que se refiere a otros estados de conciencia y aporta interesantes elementos paradigmáticos. ",
         "resumenCompleto": "Un libro que no habla técnicamente de enteógenos, pero que se refiere a otros estados de conciencia y aporta interesantes elementos paradigmáticos. <br> Es un libro cuyo espíritu místico-mágico-poético se hace rápidamente manifiesto, pero hablando de ciencia y técnica.<br> Asistimos al matrimonio entre el simbolismo y el racionalismo, el cálculo y el mito, los sacrificios rituales y los experimentos de laboratorio.  Pionero en el análisis de Civilizaciones Desaparecidas, de fenómenos psíquicos paranormales y de otras versiones de la historia que podríamos designar como esotéricas.",
         "tags":["epistemologia","estadosampliados","realismofantastico","arqueologia","literatura"],
-        "imagen": "img/brujos.jpg"
+        "imagen": "img/brujos.png"
     }
 ]

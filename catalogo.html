@@ -160,6 +160,32 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- suscribite al newsletter-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const forms = document.querySelectorAll("#newsletterForm");
+        
+          forms.forEach(function (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const email = form.querySelector("input[type='email']").value;
+        
+              fetch("https://script.google.com/macros/s/AKfycbxXXc_uMO2lKoZG93ja1IIPIyM--kcKpmEC-OAUl3-s8Ueunl3KyLfKdyiGE3vaZu3T9g/exec", {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `email=${encodeURIComponent(email)}`
+              }).then(() => {
+                alert("¡Gracias por suscribirte!");
+                form.reset();
+              });
+            });
+          });
+        });
+        </script>
+
     <script>
         // Fetch libros.json and render books
         async function loadBooks() {
