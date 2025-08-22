@@ -45,7 +45,7 @@
         "resumenCorto": "Obra concebida en México, publicada en 2019 por Lunaria Ediciones, que llega a nuestras manos en una suerte de intercambio editorial. Reúne una selección de ponencias destacadas, realizadas en el Congreso sobre Sustancias Psicoactivas de la UNAM, organizada por el grupo de investigación multidisciplinar ViaSynapsis.",
         "resumenCompleto": "Obra concebida en México, publicada en 2019 por Lunaria Ediciones, que llega a nuestras manos en una suerte de intercambio editorial. Reúne una selección de ponencias destacadas, realizadas en el Congreso sobre Sustancias Psicoactivas de la UNAM, organizada por el grupo de investigación multidisciplinar ViaSynapsis. <br>Se aborda el fenómeno de las drogas y enteógenos trasversalmente, desde lo político, la filosofía, los nuevos paradigmas científicos, médicos y también desde la antropología. Una obra actual, que nos recuerda qué México es cuna indiscutible de enteógenos y chamanismos en el mundo ",        
         "tags": ["mitos", "medicinas-visionarias", "méxico", "chamanismo"],
-        "imagen": "img/ensayos.png"
+        "imagen": "img/libro-eac.png"
     },
     {
         "id": "jaguar",
@@ -69,7 +69,7 @@
         "resumenCorto": "Una versión de la evolución del cerebro y la conciencia del homo sapiens, vista a través de las drogas que consumimos. Pone como protagonista al consumo de enteógenos (y  particularmente, los hongos psilocybes) a lo largo de la historia humana. Un imprescindible de las bibliotecas psicodélicas psiconauticas.",
         "resumenCompleto": "Una versión de la evolución del cerebro y la conciencia del homo sapiens, vista a través de las drogas que consumimos. Pone como protagonista al consumo de enteógenos (y  particularmente, los hongos psilocybes) a lo largo de la historia humana. Un imprescindible de las bibliotecas psicodélicas psiconauticas.",        
         "tags":["antropologia","psicodelico","filosofia","psiconautica","dmt","psilocibina"],
-        "imagen": "img/manjar.png"
+        "imagen": "img/libro-manjar.png"
     },
     {
         "id": "nueva-consc",
@@ -93,7 +93,7 @@
         "resumenCorto": "Ha llegado la hora de descubrir el oculto y fascinante mundo de los hongos, formas de vida extrañas y maravillosas que nos obligan a repensar el funcionamiento de la vida. <br>",
         "resumenCompleto": "Ha llegado la hora de descubrir el oculto y fascinante mundo de los hongos, formas de vida extrañas y maravillosas que nos obligan a repensar el funcionamiento de la vida. <br> Al proporcionar a los humanos pan, alcohol y medicamentos, han cambiado la historia de nuestra especie, mientras que su capacidad para digerir plástico, explosivos, pesticidas y petróleo crudo se aplica en el campo de las nuevas tecnologías.",        
         "tags":["hongos","filosofia","biologia"],
-        "imagen": "img/redoculta.png"
+        "imagen": "img/libro-red.png"
     },
     {
         "id": "serpiente",
@@ -117,7 +117,7 @@
         "resumenCorto": "Cabras cafeinómanas, renos micófilos, pájaros ebrios, hormigas adictas al néctar... la vida salvaje ofrece numerosos ejemplos de animales que buscan y consumen sustancias psicoactivas en su hábitat. <br>",
         "resumenCompleto": "Cabras cafeinómanas, renos micófilos, pájaros ebrios, hormigas adictas al néctar... la vida salvaje ofrece numerosos ejemplos de animales que buscan y consumen sustancias psicoactivas en su hábitat. <br> Giorgio Samorini explora este fenómeno y sugiere que, lejos de ser exclusivo del humano, el deseo de experimentar estados alterados de conciencia es compartido por muchisimos animales de forma natural y deliberada.",
         "tags":["biologia","farmacologia","etologia"],
-        "imagen": "img/animalesdroga.png"
+        "imagen": "img/libro-animales.jfif"
     },
     {
         "id": "yage",
@@ -141,7 +141,7 @@
         "resumenCorto": "<b>María Sabina</b>, nacida a fines del siglo XIX en Huautla de Jiménez, descubrió el poder curativo de ciertos hongos, llamados <i>ndixitho</i> “niños santos”, que, mediante visiones luminosas, le transmitieron el conocimiento milenario que ella habría de emplear para curar a cientos de personas.<br>",
         "resumenCompleto": "<b>María Sabina</b>, nacida a fines del siglo XIX en Huautla de Jiménez, descubrió el poder curativo de ciertos hongos, llamados <i>ndixitho</i> “niños santos”, que, mediante visiones luminosas, le transmitieron el conocimiento milenario que ella habría de emplear para curar a cientos de personas.<br> A mitad del siglo xx, su fama se disparó fuera de su entorno inmediato debido a su encuentro con Gordon Wasson, exitoso banquero que habría de convertirse en el pionero de la etnomicología; a partir de ahí, Huautla se volvió lugar de peregrinación de hippies, científicos, escritores. <br> Durante su vejez María Sabina padeció el activo rechazo de sus vecinos por haber compartido sus saberes. <br>En este libro, una autobiografia oral de Maria Sabina, <b>Alvaro Estrada</b> ofrece el irrepetible testimonio de una forma de entender la salud, las relaciones entre la naturaleza y el carácter humano, entre lo terrenal y lo trascendente. En suma, de un valor antropologico incalculable.",
         "tags":["antropologia","hongos","chamanismo"],
-        "imagen": "img/mariasabina.png"
+        "imagen": "img/libro-maria.png"
     },
     {
         "id": "don-juan",
@@ -165,7 +165,7 @@
         "resumenCorto": "Otro clásico que no requiere demasiada presentación, cuyo título remite a la conocida frase de William Blake: “Si las puertas de la percepción estuviesen abiertas, todo se nos mostraría tal cual es: infinito”.  <br>",
         "resumenCompleto": "Otro clásico que no requiere demasiada presentación, cuyo título remite a la conocida frase de William Blake: “Si las puertas de la percepción estuviesen abiertas, todo se nos mostraría tal cual es: infinito”.  <br> Aquí se trata de la novelesca experiencia del escritor Inglés <b>Aldous Huxley</b> con cristales de Mescalina (compuesto activo de cactus como el San Pedro y Peyote) supervisada por el psiquiatra Humpry Osmond (quien acuñara el término “psicodélico”). <br> Indispensable obra que no puede faltar en ninguna biblioteca psicodélica.",
         "tags":["mescalina","psiconautica","psicodelicos","literatura"],
-        "imagen": "img/puertas.png"
+        "imagen": "img/libro-puertas.png"
     },
     {
         "id": "lsd",
@@ -189,7 +189,7 @@
         "resumenCorto": "Esta obra se trata de un trabajo transversal e interdisciplinario entre químicos  (Hofmann y Ott) sociólogos  (Fericgla) filósofos (Escohotado)  y expertos multifacéticos (Samorini, al igual que todos los ya mencionados), tocando problemas de la psicología, la arqueología, farmacología y filosofía de los estados ampliados de conciencia, facilitados por sustancias psicodélicas o enteógenas.",
         "resumenCompleto": "Esta obra se trata de un trabajo transversal e interdisciplinario entre químicos  (Hofmann y Ott) sociólogos  (Fericgla) filósofos (Escohotado)  y expertos multifacéticos (Samorini, al igual que todos los ya mencionados), tocando problemas de la psicología, la arqueología, farmacología y filosofía de los estados ampliados de conciencia, facilitados por sustancias psicodélicas o enteógenas.",
         "tags":["farmacologia","psicodelico","enteogeno"],
-        "imagen": "img/csyenteo.png"
+        "imagen": "img/libro-enteo.png"
     },
     {
         "id": "pharmacophilia",
@@ -225,7 +225,7 @@
         "resumenCorto": "El libro reúne perspectivas antropológicas, etnobotánicas, fármaco químicas e inclusive cuenta con uno de los primeros manuales de cultivo. <br>Además, contiene fotos e ilustraciones. Hermoso viaje de iniciación al mundillo del Teonanacatl (carne de los dioses, como llamaban los aztecas a los hongos). ",
         "resumenCompleto": "El libro reúne perspectivas antropológicas, etnobotánicas, fármaco químicas e inclusive cuenta con uno de los primeros manuales de cultivo. <br>Además, contiene fotos e ilustraciones. Hermoso viaje de iniciación al mundillo del Teonanacatl (carne de los dioses, como llamaban los aztecas a los hongos). <br> Son extractos transcritos de la 2da Conferencia Internacional sobre Hongos Alucinógenos, de 1977, en EEUU, donde disertaron autoridades en la materia como <b>G. Wasson, Albert Hofmann, Jonathan Ott</b> y otros.",
         "tags":["farmacologia","psicodelico","enteogeno","arqueologia","botanica"],
-        "imagen": "img/teonana.png"
+        "imagen": "img/libro-teonana.png"
     },
     {
         "id": "eleusis",
@@ -237,7 +237,7 @@
         "resumenCorto": "Viaje al corazón de los misterios eleusinos, cuya bebida iniciática, el Kykeon, es desvelada como lo que hoy conocemos como la dietilamida de ácido lisérgico (LSD). <br> ",
         "resumenCompleto": "Viaje al corazón de los misterios eleusinos, cuya bebida iniciática, el Kykeon, es desvelada como lo que hoy conocemos como la dietilamida de ácido lisérgico (LSD). <br> Siguiendo una argumentación lógica en base a datos empíricos, históricos y análisis mitológico, el libro explora los orígenes y secretos de los misterios eleusinos. Es una de las obras producto del descubrimiento de Hofmann de la LSD.",
         "tags":["farmacologia","psicodelico","enteogeno"],
-        "imagen": "img/eleusis.png"
+        "imagen": "img/libro-eleusis.png"
     },
     {
         "id": "retorno",
