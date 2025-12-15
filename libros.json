@@ -108,6 +108,18 @@
         "imagen": "img/serpientecosmica.png"
     },
     {
+        "id": "psilocibes",
+        "titulo": "֍ Psilocibes",
+        "autor": "Jose Carlos Bouso",
+        "paginas": 0,
+        "añoPublicacion": 2013,
+        "categoria": "Otros",
+        "resumenCorto": "Psilocibes <br>",
+        "resumenCompleto": "Psilocibes <br>",        
+        "tags":["hongos","filosofia","biologia"],
+        "imagen": "img/psilocibes.png"
+    },
+    {
         "id": "animales",
         "titulo": "֍ Animales que se Drogan",
         "autor": "Giorgio Samorini",
