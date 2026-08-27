@@ -163,49 +163,33 @@
             .talk-image {
                 flex: 0 0 200px;
             }
-
-            .navbar {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .nav-links li {
-                margin: 0 0.7rem;
-            }
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.8);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Logo Editorial" height="100">
+                <img src="img/logo.png" alt="Libros Enteogénicos">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="nav-burger"><span></span><span></span><span></span></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="home.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#donaciones">Donaciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#donaciones">Donaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#newsletter">Suscribite</a></li>
                 </ul>
-                <div class="social-icons ms-3">
-                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank"
-                        class="hvr-icon-grow text-light hover-effect me-2">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:libros.enteogenicos@gmail.com" class="hvr-icon-grow text-light hover-effect">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="social-icons ms-lg-3">
+                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="mailto:libros.enteogenicos@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -498,7 +482,7 @@
                 <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                         class="fas fa-envelope fa-2x"></i></a>
             </div>
-            <p>&copy; 2025 • Libros Enteogénicos</p>
+            <p>&copy; 2026 • Libros Enteogénicos</p>
             <p>Powered by <a class="text-main" href="">Tuti</a></p>
         </div>
     </footer>

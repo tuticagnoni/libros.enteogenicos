@@ -210,8 +210,8 @@
         "paginas": 217,
         "añoPublicacion": 1998,
         "categoria": "Clásicos Psicodélicos",
-        "resumenCorto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda viva, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin).",
-        "resumenCompleto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda viva, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin). <br> Pone en disputa, fiel a su estilo ácido, muchos de los lugares comunes y las nociones preconcebidas acerca de la psicodelia y la psiconáutica. Navegando por las olas de la etno-farmacobotánica, el chamanismo y los estados de consciencia alterada, empezando por cuestionar la idea de Baudelaire de 'droga' como 'paraíso artificial'. Abundante en notas, citas, y documentación científica de distintas áreas, esta obra es otra imprescindible en la biblioteca del enteo-lector.",
+        "resumenCorto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin).",
+        "resumenCompleto": "Otro manifiesto de la erudición enteognósica del químico Ott (leyenda, aprendiz y colaborador de pioneros como Wasson, Hofmann, Schultes y Shulgin). <br> Pone en disputa, fiel a su estilo ácido, muchos de los lugares comunes y las nociones preconcebidas acerca de la psicodelia y la psiconáutica. Navegando por las olas de la etno-farmacobotánica, el chamanismo y los estados de consciencia alterada, empezando por cuestionar la idea de Baudelaire de 'droga' como 'paraíso artificial'. Abundante en notas, citas, y documentación científica de distintas áreas, esta obra es otra imprescindible en la biblioteca del enteo-lector.",
         "tags":["farmacologia","psicodelico","enteogeno","arqueologia","botanica"],
         "imagen": "img/pharmacofilia.png"
     },
@@ -230,12 +230,12 @@
     {
         "id": "teonanacatl",
         "titulo": "֍ Teonanácatl",
-        "autor": "Hofmann, Ott, Fericgla, Samorini",
+        "autor": "Wasson, Hofmann, Ott, Schultes",
         "paginas": 175,
         "añoPublicacion": 1985,
         "categoria": "Clásicos Psicodélicos",
         "resumenCorto": "El libro reúne perspectivas antropológicas, etnobotánicas, fármaco químicas e inclusive cuenta con uno de los primeros manuales de cultivo. <br>Además, contiene fotos e ilustraciones. Hermoso viaje de iniciación al mundillo del Teonanacatl (carne de los dioses, como llamaban los aztecas a los hongos). ",
-        "resumenCompleto": "El libro reúne perspectivas antropológicas, etnobotánicas, fármaco químicas e inclusive cuenta con uno de los primeros manuales de cultivo. <br>Además, contiene fotos e ilustraciones. Hermoso viaje de iniciación al mundillo del Teonanacatl (carne de los dioses, como llamaban los aztecas a los hongos). <br> Son extractos transcritos de la 2da Conferencia Internacional sobre Hongos Alucinógenos, de 1977, en EEUU, donde disertaron autoridades en la materia como <b>G. Wasson, Albert Hofmann, Jonathan Ott</b> y otros.",
+        "resumenCompleto": "El libro reúne perspectivas antropológicas, etnobotánicas, fármaco químicas e inclusive cuenta con uno de los primeros manuales de cultivo. <br>Además, contiene fotos e ilustraciones. Hermoso viaje de iniciación al mundillo del Teonanacatl (carne de los dioses, como llamaban los aztecas a los hongos). <br> Son extractos transcritos de la 2da Conferencia Internacional sobre Hongos Alucinógenos, de 1977, en EEUU, donde disertaron autoridades en la materia como <b>G. Wasson, A. Hofmann, J. Ott y R. E. Schultes</b>.",
         "tags":["farmacologia","psicodelico","enteogeno","arqueologia","botanica"],
         "imagen": "img/libro-teonana.png"
     },
@@ -262,5 +262,71 @@
         "resumenCompleto": "Un libro que no habla técnicamente de enteógenos, pero que se refiere a otros estados de conciencia y aporta interesantes elementos paradigmáticos. <br> Es un libro cuyo espíritu místico-mágico-poético se hace rápidamente manifiesto, pero hablando de ciencia y técnica.<br> Asistimos al matrimonio entre el simbolismo y el racionalismo, el cálculo y el mito, los sacrificios rituales y los experimentos de laboratorio.  Pionero en el análisis de Civilizaciones Desaparecidas, de fenómenos psíquicos paranormales y de otras versiones de la historia que podríamos designar como esotéricas.",
         "tags":["epistemologia","estadosampliados","realismofantastico","arqueologia","literatura"],
         "imagen": "img/brujos.png"
+    },
+    {
+        "id": "phikal",
+        "titulo": "֍ PIHKAL",
+        "autor": "Alexander Shulgin y Ann Shulgin",
+        "añoPublicacion": 1991,
+        "categoria": "Clásicos Psicodélicos",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["quimica","feniletilaminas","mdma","psiconautica","farmacologia","psicodelico"],
+        "imagen": ""
+    },
+    {
+        "id": "thikal",
+        "titulo": "֍ TIHKAL",
+        "autor": "Alexander Shulgin y Ann Shulgin",
+        "añoPublicacion": 1997,
+        "categoria": "Clásicos Psicodélicos",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["quimica","triptaminas","dmt","ayahuasca","psiconautica","psicodelico"],
+        "imagen": ""
+    },
+    {
+        "id": "drogas-ebriedad",
+        "titulo": "֍ Drogas y Ebriedad",
+        "autor": "Ernst Jünger",
+        "añoPublicacion": 1970,
+        "categoria": "Clásicos Psicodélicos",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["literatura","filosofia","psiconautica","mescalina","lsd","ensayo"],
+        "imagen": ""
+    },
+    {
+        "id": "pharmacotheon",
+        "titulo": "֍ Pharmacotheon",
+        "autor": "Jonathan Ott",
+        "añoPublicacion": 1993,
+        "categoria": "Clásicos Psicodélicos",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["farmacologia","etnobotanica","quimica","enteogeno","historia","psicodelico"],
+        "imagen": ""
+    },
+    {
+        "id": "como-cambiar-tu-mente",
+        "titulo": "֍ Cómo Cambiar tu Mente",
+        "autor": "Michael Pollan",
+        "añoPublicacion": 2018,
+        "categoria": "Otros",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["periodismo","psilocibina","lsd","neurociencia","terapia","psicodelico"],
+        "imagen": ""
+    },
+    {
+        "id": "ino-moxo",
+        "titulo": "֍ Las Tres Mitades de Ino Moxo y otros brujos de la Amazonía",
+        "autor": "César Calvo",
+        "añoPublicacion": 1981,
+        "categoria": "Clásicos Psicodélicos",
+        "resumenCorto": "",
+        "resumenCompleto": "",
+        "tags": ["amazonia","ayahuasca","chamanismo","yage","literatura","peru"],
+        "imagen": ""
     }
 ]

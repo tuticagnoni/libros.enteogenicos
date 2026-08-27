@@ -3,6 +3,13 @@
     --main-color: #228B14;
     --text-color: #EAE3DA;
     --accent-color: #FA4319;
+    --nav-h: 58px;
+}
+
+@media (min-width: 992px) {
+    :root {
+        --nav-h: 74px;
+    }
 }
 
 /* Custom Cursor */
@@ -11,21 +18,189 @@ body, a, button {
     cursor: url('img/cursor-bg.png') 16 16, auto !important; /* Añade un punto de anclaje central */
 } 
 
+html {
+    scroll-padding-top: calc(var(--nav-h) + 12px);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: var(--nav-h);
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+img {
+    max-width: 100%;
+}
+
 .mt-10 {
-    margin-top: 10%;
+    margin-top: 2rem;
 }
 .mt-15 {
-    margin-top: 15%;
+    margin-top: 2.5rem;
+}
+
+/* ===== Navbar ===== */
+.site-nav {
+    background-color: #141414;
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+    padding: 0;
+    min-height: var(--nav-h);
+}
+
+.site-nav > .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: var(--nav-h);
+}
+
+.site-nav .navbar-brand {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .navbar-brand img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.site-nav .nav-link {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+    color: var(--main-color);
+}
+
+.site-nav .social-icons a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.site-nav .social-icons a:hover {
+    color: var(--main-color);
+}
+
+/* Custom hamburger */
+.site-nav .navbar-toggler {
+    border: 0;
+    padding: 6px;
+    outline: 0;
+    box-shadow: none;
+}
+
+.site-nav .navbar-toggler:focus-visible {
+    box-shadow: 0 0 0 2px var(--main-color);
+    border-radius: 6px;
+}
+
+.nav-burger {
+    display: block;
+    width: 26px;
+    height: 18px;
+    position: relative;
+}
+
+.nav-burger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-color);
+    transition: transform 0.25s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.nav-burger span:nth-child(1) { top: 0; }
+.nav-burger span:nth-child(2) { top: 8px; }
+.nav-burger span:nth-child(3) { top: 16px; }
+
+.site-nav .navbar-toggler[aria-expanded="true"] .nav-burger span {
+    background: var(--main-color);
+}
+
+.site-nav .navbar-toggler[aria-expanded="true"] .nav-burger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.site-nav .navbar-toggler[aria-expanded="true"] .nav-burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-nav .navbar-toggler[aria-expanded="true"] .nav-burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 992px) {
+    .site-nav .navbar-brand img {
+        height: 52px;
+    }
+}
+
+/* Collapsed mobile menu */
+@media (max-width: 991.98px) {
+    .site-nav .navbar-collapse {
+        background: #141414;
+        margin-top: 10px;
+        padding: 0.25rem 0 0.4rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-nav .navbar-nav {
+        width: 100%;
+    }
+
+    .site-nav .nav-item {
+        width: 100%;
+    }
+
+    .site-nav .nav-link {
+        display: block;
+        padding: 0.9rem 1.25rem;
+        font-size: 1rem;
+        border-left: 3px solid transparent;
+    }
+
+    .site-nav .nav-item + .nav-item .nav-link {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .site-nav .nav-link:hover,
+    .site-nav .nav-link:focus,
+    .site-nav .nav-link:active {
+        color: var(--main-color);
+        background: rgba(34, 139, 20, 0.1);
+        border-left-color: var(--main-color);
+    }
+
+    .site-nav .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.75rem;
+        margin: 0 !important;
+        padding: 0.85rem 0 0.35rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .site-nav .social-icons a {
+        font-size: 1.4rem;
+        padding: 0.25rem;
+    }
 }
 
 /* Hover effects for clickable elements */
@@ -129,9 +304,179 @@ width: calc(33.333% - 20px);
 }
 
 .book-card img {
-    max-height: auto;
-    object-fit: cover;
-    object-position: top;
+    height: 320px;
+    width: 100%;
+    /* contain = la portada se ve entera, sin recorte */
+    object-fit: contain;
+    object-position: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+/* Toda la tarjeta es un link a la ficha del libro */
+.book-card-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-card-link .book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card-link:hover .book-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(34, 139, 20, 0.35);
+}
+
+.book-card-link:hover .card-title {
+    color: var(--main-color);
+}
+
+.book-card .card-title {
+    transition: color 0.2s ease;
+}
+
+.book-card .book-author {
+    margin-bottom: 0.25rem;
+}
+
+.book-card .book-meta {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin-bottom: 0.9rem;
+}
+
+/* Cada card se estira para que el boton "Ver mas" quede al fondo y alineado */
+.book-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.ver-mas-btn {
+    margin-top: auto;
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.95rem;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vm-arrow {
+    transition: transform 0.25s ease;
+}
+
+.book-card-link:hover .ver-mas-btn,
+.book-card-link:focus-visible .ver-mas-btn {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0 18px rgba(52, 224, 60, 0.45);
+}
+
+.book-card-link:hover .vm-arrow {
+    transform: translateX(3px);
+}
+
+/* Ficha de libro */
+#libro-detalle {
+    padding-top: 3rem;
+}
+
+.volver-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.75;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.volver-link:hover {
+    color: var(--main-color);
+    opacity: 1;
+}
+
+.libro-portada img {
+    width: 100%;
+    height: auto;
+    /* portada completa, sin recorte */
+    object-fit: contain;
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+}
+
+/* La pastilla de categoría va sola en su renglón, arriba del título */
+.libro-categoria-wrap {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.libro-info .libro-categoria {
+    position: static;
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+    padding: 3px 10px;
+    margin-bottom: 0;
+}
+
+.libro-titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.libro-titulo::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 0;
+}
+
+.libro-autor {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.libro-meta {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+}
+
+.libro-descripcion {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.libro-tags {
+    margin-top: 1.5rem;
+}
+
+.libro-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    margin: 0 6px 6px 0;
 }
 
 /* Newsletter */
@@ -144,6 +489,8 @@ width: calc(33.333% - 20px);
 footer {
     background-color: rgba(0,0,0,0.5);
     color: var(--text-color);
+    border-top: 2px solid var(--main-color);
+    box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.45);
 }
 
 /* Buttons and Links */
@@ -343,17 +690,363 @@ section {
 
 
 
+/* ===== Tablet y mobile ===== */
 @media (max-width: 992px) {
- .hero-nosotros {
-    height: 500px; /* Ajusta la altura para pantallas más pequeñas */
-    margin-top: 20%; /* Ajusta el padding para pantallas más pequeñas */    
+ section {
+    padding: 3rem 0;
  }
+
+ .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+ }
+
+ .hero-nosotros {
+    height: auto;
+    min-height: 300px;
+    margin-top: 0;
+    padding: 3rem 0;
+ }
+
+ .hero-nosotros h2 {
+    font-size: 1.8rem;
+ }
+
+ .hero-nosotros p {
+    font-size: 1.05rem;
+ }
+
+ .section-title {
+    margin-bottom: 2rem;
+ }
+
+ .section-title h2 {
+    font-size: 1.6rem;
+ }
+
+ .mt-10 {
+    margin-top: 1rem;
+ }
+
  #catalogo {
-    margin-top: 20%;
+    margin-top: 0;
+    padding-top: 1.5rem;
+ }
+
+ /* La portada se ve entera: alto automático segun su proporcion */
+ .book-card img {
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+ }
+
+ /* Los botones de donación se apretaban en una sola fila */
+ #donaciones .d-flex {
+    flex-wrap: wrap;
+ }
+
+ #donaciones .view-all-btn {
+    flex: 1 1 100%;
+ }
+
+ #libro-detalle {
+    padding-top: 2rem;
+ }
+
+ /* g-5 (3rem) desborda ~4px sobre el padding del container en mobile */
+ #libro-detalle .row {
+    --bs-gutter-x: 1.5rem;
+ }
+
+ .libro-portada {
+    max-width: 340px;
+    margin: 0 auto 1.5rem auto;
+ }
+
+ .libro-titulo {
+    font-size: 1.6rem;
+ }
+
+ .libro-autor {
+    font-size: 1.05rem;
+ }
+
+ /* justify en pantalla angosta deja huecos feos entre palabras */
+ .libro-descripcion {
+    text-align: left;
+ }
+}
+
+/* ===== Celular ===== */
+@media (max-width: 576px) {
+ section {
+    padding: 2rem 0;
+ }
+
+ .section-title {
+    margin-bottom: 1.5rem;
+ }
+
+ .section-title h2 {
+    font-size: 1.35rem;
+ }
+
+ #catalogo {
+    padding-top: 1rem;
+ }
+
+ /* Buscador */
+ #searchInput {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+ }
+
+ #catalogo .row.mb-4 {
+    margin-bottom: 1rem !important;
+ }
+
+ /* Catálogo: una card por fila, angosta y centrada */
+ #bookCategories {
+    gap: 26px;
+ }
+
+ .book-item {
+    width: 80%;
+    max-width: 340px;
+    margin: 0 auto !important;
+    padding: 0;
  }
 
  .book-card img {
-    max-height: 250px;
-    object-fit: cover;
+    height: auto;
+    max-height: 62vh;
+    padding: 12px;
+ }
+
+ .book-card .card-body {
+    padding: 0.85rem 0.9rem 1rem;
+ }
+
+ .ver-mas-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.05rem;
+ }
+
+ .book-card .card-title {
+    font-size: 1.05rem;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+ }
+
+ .book-card .book-author {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+ }
+
+ .book-card .book-meta {
+    font-size: 0.8rem;
+ }
+
+ .book-category-tag {
+    font-size: 0.72rem;
+    padding: 3px 9px;
+    top: 9px;
+    left: 9px;
+ }
+
+ /* Pedidos */
+ #pedidos {
+    padding: 1.25rem 0;
+ }
+
+ #pedidos h4 {
+    font-size: 0.95rem;
+    line-height: 1.4;
+ }
+
+ #pedidos h4 a {
+    display: block;
+    word-break: break-word;
+ }
+
+ #pedidos p {
+    font-size: 0.82rem;
+    margin-bottom: 0;
+ }
+
+ #pedidos p br {
+    display: none;
+ }
+
+ /* Newsletter: input + botón apilados */
+ #newsletter {
+    padding: 2rem 0;
+ }
+
+ #newsletterForm {
+    flex-direction: column;
+ }
+
+ #newsletterForm .form-control {
+    margin-right: 0 !important;
+    margin-bottom: 0.75rem;
+ }
+
+ #newsletter h2 {
+    font-size: 1.4rem;
+ }
+
+ #newsletter p {
+    font-size: 0.9rem;
+ }
+
+ /* Donaciones */
+ #donaciones .card-body {
+    padding: 1.1rem;
+ }
+
+ #donaciones .card-body h3 {
+    font-size: 1rem;
+ }
+
+ #donaciones .card-body h2.card-title {
+    font-size: 1.2rem;
+ }
+
+ #donaciones .card-body p {
+    font-size: 0.85rem;
+ }
+
+ .libro-titulo {
+    font-size: 1.4rem;
+ }
+
+ /* Nosotros: bloque de texto largo, más compacto en celular */
+ .about-text p,
+ #publications p,
+ .card-text {
+    font-size: 0.92rem;
+    line-height: 1.55;
+ }
 }
+
+/* ===== Celular angosto ===== */
+@media (max-width: 360px) {
+ .book-item {
+    width: 90%;
+ }
+
+ .book-card .card-title {
+    font-size: 1rem;
+ }
+}
+
+
+/* ============================================================
+   Entradas sci-fi / materializacion holografica
+   Los elementos con [data-reveal] arrancan invisibles y se
+   "materializan" al entrar en viewport (ver reveal.js).
+   ============================================================ */
+
+[data-reveal] {
+    opacity: 0;
+}
+
+[data-reveal]:not(.is-revealed) {
+    will-change: opacity, transform, filter, clip-path;
+}
+
+/* Panel HUD que se imprime de adentro hacia afuera, con blur
+   que resuelve, leve rotacion 3D y sobre-brillo que decanta */
+@keyframes holo-materialize {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9) perspective(900px) rotateX(18deg);
+        filter: blur(20px) brightness(2.3) saturate(1.7);
+        clip-path: inset(50% 0 50% 0);
     }
+    45% {
+        opacity: 1;
+        filter: blur(7px) brightness(1.55) saturate(1.4);
+        clip-path: inset(0 0 0 0);
+    }
+    70% {
+        transform: translateY(0) scale(1.015) perspective(900px) rotateX(0deg);
+        filter: blur(1.5px) brightness(1.15) saturate(1.15);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) perspective(900px) rotateX(0deg);
+        filter: blur(0) brightness(1) saturate(1);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Descarga de energia: halo verde que aparece y se apaga */
+@keyframes holo-flare {
+    0%   { box-shadow: 0 0 0 0 rgba(52, 224, 60, 0); }
+    45%  { box-shadow: 0 0 36px 6px rgba(52, 224, 60, 0.55), 0 0 70px 6px rgba(130, 255, 160, 0.28); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 224, 60, 0); }
+}
+
+/* Aberracion cromatica que converge (glitch que se estabiliza) */
+@keyframes rgb-split {
+    0% {
+        text-shadow: -4px 0 rgba(255, 32, 96, 0.85), 4px 0 rgba(32, 208, 255, 0.85);
+        letter-spacing: 0.06em;
+    }
+    60% {
+        text-shadow: -1px 0 rgba(255, 32, 96, 0.4), 1px 0 rgba(32, 208, 255, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        letter-spacing: normal;
+    }
+}
+
+[data-reveal].is-revealed {
+    animation: holo-materialize 0.85s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: var(--rd, 0ms);
+}
+
+/* --- Catalogo --- */
+.book-item[data-reveal].is-revealed .book-card {
+    animation: holo-flare 0.9s ease-out both;
+    animation-delay: var(--rd, 0ms);
+}
+
+.book-item[data-reveal].is-revealed .card-title {
+    animation: rgb-split 0.6s ease-out both;
+    animation-delay: calc(var(--rd, 0ms) + 90ms);
+}
+
+/* --- Ficha de cada libro --- */
+.libro-portada[data-reveal].is-revealed img {
+    animation: holo-flare 1s ease-out both;
+    animation-delay: var(--rd, 0ms);
+}
+
+.libro-titulo[data-reveal].is-revealed {
+    animation:
+        holo-materialize 0.85s cubic-bezier(0.19, 1, 0.22, 1) both,
+        rgb-split 0.75s ease-out both;
+    animation-delay: var(--rd, 0ms);
+}
+
+.libro-tag[data-reveal].is-revealed {
+    animation: holo-materialize 0.6s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation-delay: var(--rd, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal],
+    [data-reveal].is-revealed,
+    [data-reveal].is-revealed * {
+        opacity: 1 !important;
+        animation: none !important;
+        filter: none !important;
+        clip-path: none !important;
+        transform: none !important;
+        text-shadow: none !important;
+    }
+}

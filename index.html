@@ -22,17 +22,21 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <noscript>
+        <style>[data-reveal] { opacity: 1 !important; }</style>
+    </noscript>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.8);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Logo Editorial" height="100">
+                <img src="img/logo.png" alt="Libros Enteogénicos">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="nav-burger"><span></span><span></span><span></span></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -41,10 +45,10 @@
                     <li class="nav-item"><a class="nav-link" href="#donaciones">Donaciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#newsletter">Suscribite</a></li>
                 </ul>
-                <div class="social-icons ms-3">
-                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" class="text-light me-2"><i
+                <div class="social-icons ms-lg-3">
+                    <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" aria-label="Instagram"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
+                    <a href="mailto:libros.enteogenicos@gmail.com" aria-label="Email"><i
                             class="fas fa-envelope"></i></a>
                 </div>
             </div>
@@ -53,9 +57,9 @@
 
 
     <!-- Catálogo -->
-    <section id="catalogo" class="py-5">
+    <section id="catalogo" class="pb-5 pt-4">
         <div class="container section-title">
-            <h2 class="text-center mb-5 mt-10">Nuestro Catálogo</h2>
+            <h2 class="text-center mb-4 mt-10" data-reveal>Nuestro Catálogo</h2>
 
             <div class="row mb-4">
                 <div class="col-md-6 offset-md-3">
@@ -65,7 +69,7 @@
             </div>
 
             <!-- Información de Pedidos -->
-            <section id="pedidos" class="bg-dark py-4 text-center">
+            <section id="pedidos" class="bg-dark py-4 text-center" data-reveal>
                 <div class="container">
                     <h4 class="text-light mb-0">
                         Pedidos y consultas »
@@ -89,7 +93,7 @@
 
     <!-- Newsletter -->
     <section id="newsletter">
-        <div class="container text-center">
+        <div class="container text-center" data-reveal>
             <h2>Newsletter Enteogénico</h2>
             <p>Enterate de los <b>nuevos títulos</b> de la editorial y obtene <b>contenido exclusivo</b>!</p>
 
@@ -111,7 +115,7 @@
             <!-- <h2 class="mb-3">¿Te gusta lo que hacemos?</h2> -->
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="card bg-dark border-main mb-4">
+                    <div class="card bg-dark border-main mb-4" data-reveal>
                         <div class="card-body">
                             <h3 class="mb-3  text-light">¿Te gusta lo que hacemos?</h3>
                             <h2 class="card-title text-light">Ayúdanos a ampliar la Biblioteca</h2>
@@ -159,13 +163,16 @@
                 <a href="mailto:libros.enteogenicos@gmail.com" class="text-light"><i
                         class="fas fa-envelope fa-2x"></i></a>
             </div>
-            <p>&copy; 2025 • Libros Enteogénicos</p>
+            <p>&copy; 2026 • Libros Enteogénicos</p>
             <p>Powered by <a class="text-main" href="">Tuti</a></p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animaciones de entrada -->
+    <script src="reveal.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -212,46 +219,48 @@
             const bookCategoriesContainer = document.getElementById('bookCategories');
             bookCategoriesContainer.innerHTML = ''; // Clear previous content
 
-            books.forEach(book => {
+            books.forEach((book, index) => {
                 const bookElement = document.createElement('div');
                 bookElement.className = 'col-md-4 mb-4 book-item';
+                bookElement.setAttribute('data-reveal', '');
+                bookElement.style.setProperty('--rd', (index % 5) * 70 + 'ms');
                 bookElement.dataset.title = book.titulo;
                 bookElement.dataset.author = book.autor;
                 bookElement.dataset.tags = book.tags.join(' ');
 
+                const categoria = book.categoria
+                    ? `<span class="book-category-tag">${book.categoria}</span>`
+                    : '';
+                const datos = [
+                    book.añoPublicacion ? book.añoPublicacion : null,
+                    book.paginas ? `${book.paginas} páginas` : null
+                ].filter(Boolean).join(' • ');
+
                 bookElement.innerHTML = `
-                    <div class="card book-card h-100">
-                        <img src="${book.imagen}" class="card-img-top" alt="${book.titulo}">
-                        <span class="book-category-tag">${book.categoria}</span>
-                        <div class="card-body">
-                            <h5 class="card-title"><b>${book.titulo}</b></h5>
-                            <p class="card-text">${book.autor}</p>
-                            <p class="card-text">${book.añoPublicacion} • ${book.paginas} páginas</p>
-                            <p class="card-text short-summary">${book.resumenCorto}</p>
-                            <p class="card-text full-summary d-none">${book.resumenCompleto}</p>
-                            <button class="btn btn-view-more ">Leer más</button>
+                    <a href="libro.html?id=${encodeURIComponent(book.id)}" class="book-card-link">
+                        <div class="card book-card h-100">
+                            <img src="${book.imagen || 'img/logo.png'}" class="card-img-top" alt="${book.titulo}">
+                            ${categoria}
+                            <div class="card-body">
+                                <h5 class="card-title"><b>${book.titulo}</b></h5>
+                                <p class="card-text book-author">${book.autor}</p>
+                                <p class="card-text book-meta">${datos}</p>
+                                <span class="ver-mas-btn">Ver más <span class="vm-arrow" aria-hidden="true">&rarr;</span></span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 `;
 
                 bookCategoriesContainer.appendChild(bookElement);
             });
 
-            // Add event listeners for summary toggle
-            document.querySelectorAll('.btn-view-more').forEach(button => {
-                button.addEventListener('click', function () {
-                    const card = this.closest('.book-card');
-                    const shortSummary = card.querySelector('.short-summary');
-                    const fullSummary = card.querySelector('.full-summary');
-
-                    shortSummary.classList.toggle('d-none');
-                    fullSummary.classList.toggle('d-none');
-
-                    this.textContent = shortSummary.classList.contains('d-none') ? 'Leer menos' : 'Leer más';
-                });
-            });
-
             setupSearch();
+            if (window.revealInit) {
+                window.revealInit(bookCategoriesContainer);
+            } else {
+                bookCategoriesContainer.querySelectorAll('[data-reveal]')
+                    .forEach(el => el.classList.add('is-revealed'));
+            }
         }
 
         function setupSearch() {
