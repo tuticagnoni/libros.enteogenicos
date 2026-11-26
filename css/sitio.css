@@ -385,6 +385,12 @@ a:hover { color: var(--rojo); }
 .pie a { color: var(--kraft); }
 .pie a:hover { color: var(--rojo-claro); }
 .pie__lema { margin: 0; font-family: var(--f-titulo); font-stretch: 54%; font-weight: 900; font-size: clamp(56px, 12vw, 120px); line-height: .82; text-transform: uppercase; text-shadow: 5px 4px 0 var(--rojo); }
+.pie__lema-sub {
+  display: block; margin-top: 14px;
+  font-family: var(--f-texto); font-stretch: normal; font-weight: 600;
+  font-size: clamp(26px, 3.4vw, 44px); line-height: 1.1;
+  text-transform: none; text-shadow: none; color: var(--rojo-claro);
+}
 .suscribir label { display: block; font-size: 18px; margin-bottom: 12px; }
 .suscribir__fila { display: flex; }
 .suscribir input {
