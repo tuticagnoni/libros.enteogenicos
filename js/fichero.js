@@ -11,6 +11,10 @@ const FUENTE_JSON = 'libros.json';
 
 const ESCRITORIO = window.matchMedia('(min-width: 900px)');
 
+// en el inicio se muestran solo los destacados; en catalogo.html, todos
+const PAGINA = document.body.dataset.pagina || 'catalogo';
+const CANTIDAD_DESTACADOS = 6;
+
 const estado = {
   libros: [],
   filtro: 'Todos',
@@ -70,7 +74,9 @@ function parsearCSV(texto) {
 
 function normalizarLibro(b) {
   const tags = Array.isArray(b.tags) ? b.tags : String(b.tags || '').split(',').map((t) => t.trim()).filter(Boolean);
-  const nuevo = b.nuevo === true || /^(si|sí|true|1|x)$/i.test(String(b.nuevo || '').trim());
+  const marcado = (v) => v === true || /^(si|sí|true|1|x)$/i.test(String(v || '').trim());
+  const nuevo = marcado(b.nuevo);
+  const destacado = marcado(b.destacado);
   return {
     id: String(b.id || '').trim(),
     titulo: limpiarTitulo(b.titulo),
@@ -82,7 +88,8 @@ function normalizarLibro(b) {
     resumenCompleto: b.resumenCompleto || b.resumenCorto || '',
     tags,
     imagen: b.imagen || '',
-    nuevo
+    nuevo,
+    destacado
   };
 }
 
@@ -111,6 +118,11 @@ function categorias() {
 }
 
 function librosVisibles() {
+  if (PAGINA === 'inicio') {
+    // los marcados como "destacado"; si no hay ninguno, los primeros del catálogo
+    const marcados = estado.libros.filter((b) => b.destacado);
+    return (marcados.length ? marcados : estado.libros).slice(0, CANTIDAD_DESTACADOS);
+  }
   const q = normalizar(estado.busqueda);
   return estado.libros.filter((b) => {
     if (estado.filtro !== 'Todos' && b.categoria !== estado.filtro) return false;
@@ -120,6 +132,7 @@ function librosVisibles() {
 }
 
 function pintarFiltros() {
+  if (!$('#filtros')) return;
   $('#filtros').innerHTML = categorias().map((c) =>
     `<button type="button" class="filtro" data-filtro="${escapar(c)}" aria-pressed="${c === estado.filtro}">${escapar(c)}</button>`
   ).join('');
@@ -136,7 +149,7 @@ function fichaHTML(b, conTitulo) {
   const titulo = conTitulo ? `<h3 class="titulo-medio ficha__titulo">${escapar(b.titulo)}</h3>` : '';
   const acciones = (reverso) => `
     <div class="ficha__acciones">
-      <button type="button" class="boton boton--borde boton--ui" data-accion="voltear">${reverso ? 'Volver al frente' : 'Ver reseña'}</button>
+      <button type="button" class="boton boton--tinta boton--chico" data-accion="voltear">${reverso ? 'Volver al frente' : 'Ver reseña'}</button>
       <button type="button" class="boton boton--tinta boton--chico" data-accion="pedir" data-id="${escapar(b.id)}">Pedir</button>
     </div>`;
 
@@ -305,9 +318,9 @@ function eventos() {
     }
   });
 
-  $('#buscador').addEventListener('input', (e) => { estado.busqueda = e.target.value; pintarMazo(); });
+  $('#buscador')?.addEventListener('input', (e) => { estado.busqueda = e.target.value; pintarMazo(); });
 
-  $('#filtros').addEventListener('click', (e) => {
+  $('#filtros')?.addEventListener('click', (e) => {
     const boton = e.target.closest('[data-filtro]');
     if (!boton) return;
     estado.filtro = boton.dataset.filtro;
@@ -335,7 +348,7 @@ function eventos() {
   $('#pedido-cerrar').addEventListener('click', cerrarPedido);
   $('#form-pedido').addEventListener('submit', enviarPedido);
   $('#form-suscribir').addEventListener('submit', suscribir);
-  $('#copiar-alias').addEventListener('click', copiarAlias);
+  $('#copiar-alias')?.addEventListener('click', copiarAlias);
 }
 
 async function iniciar() {
@@ -347,9 +360,10 @@ async function iniciar() {
     $('#fichero-vacio').textContent = 'No pudimos cargar el catálogo. Probá recargar la página.';
     return;
   }
-  $('#fichero-bajada').textContent = `${estado.libros.length} títulos, de lo más nuevo a lo primero que editamos.`;
-  // en celular arranca con la primera ficha abierta, como en el diseño
-  estado.abierto = estado.libros[0]?.id ?? null;
+  const cantidad = $('#cantidad-titulos');
+  if (cantidad) cantidad.textContent = `${estado.libros.length} títulos`;
+  // arranca con la primera ficha abierta, como en el diseño
+  estado.abierto = librosVisibles()[0]?.id ?? null;
   pintarFiltros();
   pintarMazo();
 }

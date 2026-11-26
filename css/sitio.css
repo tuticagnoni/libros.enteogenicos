@@ -51,7 +51,7 @@ body::after {
   z-index: 100;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 a:hover { color: var(--rojo); }
 :focus-visible { outline: 3px dashed var(--rojo); outline-offset: 3px; }
@@ -157,14 +157,14 @@ a:hover { color: var(--rojo); }
 /* ---------- hero ---------- */
 .hero { padding-top: 36px; }
 .hero__grilla { display: grid; gap: 36px; }
-.hero__titulo { font-size: clamp(76px, 22vw, 220px); }
+.hero__titulo { font-size: clamp(58px, 11vw, 140px); }
 .hero__texto {
   margin: 28px 0 0; max-width: 30ch; font-size: 20px; line-height: 1.45;
   border-top: 6px solid var(--tinta); padding-top: 18px;
 }
 .hero__acciones { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 .hero__grabado { position: relative; margin: 0; }
-.hero__grabado img { width: 100%; border: 10px solid var(--tinta); }
+.hero__grabado img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 10px solid var(--tinta); }
 .sello {
   position: absolute; width: 132px; height: 132px; left: -10px; bottom: -34px;
   transform: rotate(-12deg);
@@ -185,7 +185,11 @@ a:hover { color: var(--rojo); }
   font-size: clamp(30px, 6vw, 46px); line-height: 1; padding: 14px 0;
   text-transform: uppercase;
 }
-.oficio span { display: inline-block; padding-left: var(--gutter); }
+/* cinta que corre: el texto va dos veces y se desplaza la mitad */
+.oficio__cinta { display: flex; width: max-content; animation: cinta 38s linear infinite; }
+.oficio__cinta span { flex: none; padding-right: .35em; }
+@keyframes cinta { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .oficio__cinta { animation: none; } }
 
 /* ---------- manifiesto ---------- */
 .manifiesto { position: relative; background: var(--tinta); color: var(--kraft); padding: 80px 0 90px; }
@@ -196,7 +200,7 @@ a:hover { color: var(--rojo); }
 .manifiesto .contenedor { position: relative; }
 .manifiesto h2 { margin: 0; font-family: var(--f-ui); font-size: 16px; color: var(--rojo-claro); }
 .manifiesto__frase {
-  margin: 16px 0 0; max-width: 26ch; font-weight: 600;
+  margin: 0; max-width: 26ch; font-weight: 600;
   font-size: clamp(30px, 4.4vw, 62px); line-height: 1.12; text-wrap: balance;
 }
 .vinetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; margin-top: 56px; }
@@ -232,6 +236,8 @@ a:hover { color: var(--rojo); }
 
 .fichero__cuerpo { margin-top: 28px; border-top: 6px solid var(--tinta); padding-top: 26px; }
 .fichero__vacio { font-family: var(--f-ui); font-size: 16px; padding: 24px 0; }
+.fichero__ver-todo { display: flex; justify-content: center; margin-top: 40px; }
+.pagina-catalogo .fichero { padding-top: 48px; }
 
 .mazo { list-style: none; margin: 0; padding: 0; }
 .mazo__item + .mazo__item { margin-top: 6px; }

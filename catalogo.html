@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26N3EMYWHJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-26N3EMYWHJ');
+  </script>
+
+  <title>Catálogo — Libros Enteogénicos</title>
+  <meta name="description" content="Todos los libros de Libros Enteogénicos: cosidos a mano en Rosario, páginas A5, tapa de cartón laminado.">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Montagu+Slab:opsz,wght@16..144,400..700&family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/sitio.css">
+</head>
+
+<body data-pagina="catalogo" class="pagina-catalogo">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="aspero" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="3" result="n"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+    </filter>
+  </svg>
+
+  <div class="franja">
+    <div class="contenedor">
+      <span>Libros cosidos a mano en Rosario, Santa Fe</span>
+      <span>Pedidos: <a href="mailto:libros.enteogenicos@gmail.com">libros.enteogenicos@gmail.com</a></span>
+    </div>
+  </div>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="encabezado__logo" href="index.html" aria-label="Libros Enteogénicos, inicio">
+        <img src="img/grafica/logo-negro.png" alt="Logo de Libros Enteogénicos" width="76" height="58">
+      </a>
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">
+        <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><path d="M0 2h22M0 8h22M0 14h22" stroke="currentColor" stroke-width="3"/></svg>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Principal">
+        <ul>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="index.html#biblioteca">Biblioteca</a></li>
+          <li><a href="home.html">Nosotros</a></li>
+          <li><a href="index.html#biblioteca">Donaciones</a></li>
+          <li><a href="#suscribite">Suscribite</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="fichero contenedor" id="fichero" aria-labelledby="titulo-fichero">
+      <div class="fichero__cabeza">
+        <h1 id="titulo-fichero" class="titulo-grabado fichero__titulo">Catálogo</h1>
+        <div class="herramientas">
+          <label class="visualmente-oculto" for="buscador">Buscar por título, autor o tema</label>
+          <input class="buscador" id="buscador" type="search" placeholder="Buscar título, autor o tema" autocomplete="off">
+          <div class="filtros" id="filtros" role="group" aria-label="Filtrar por tema"></div>
+        </div>
+      </div>
+
+      <div class="fichero__cuerpo">
+        <ol class="mazo" id="mazo" aria-label="Libros del catálogo"></ol>
+        <aside class="panel" id="panel" aria-live="polite" aria-label="Ficha del libro elegido"></aside>
+      </div>
+      <p class="fichero__vacio" id="fichero-vacio" hidden>No encontramos libros con esa búsqueda.</p>
+    </section>
+  </main>
+
+  <footer class="pie" id="suscribite">
+    <div class="contenedor">
+      <p class="pie__lema">Hecho a mano<br>en Rosario</p>
+      <div>
+        <form class="suscribir" id="form-suscribir">
+          <label for="mail-suscribir">Enterate de los nuevos títulos de la editorial y recibí contenido exclusivo.</label>
+          <div class="suscribir__fila">
+            <input id="mail-suscribir" type="email" name="email" placeholder="tu@mail.com" required autocomplete="email">
+            <button type="submit">Suscribirme</button>
+          </div>
+          <p class="suscribir__estado" id="suscribir-estado" aria-live="polite"></p>
+        </form>
+        <div class="pie__enlaces">
+          <a href="https://www.instagram.com/libros.enteogenicos/" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:libros.enteogenicos@gmail.com">libros.enteogenicos@gmail.com</a>
+        </div>
+        <p class="pie__firma">© 2026 Libros Enteogénicos. Sitio por <a href="https://tucanestudio.com" target="_blank" rel="noopener">tucan · estudio web</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="pedido" id="pedido" aria-labelledby="titulo-pedido">
+    <div class="pedido__cuerpo">
+      <button class="pedido__cerrar" type="button" id="pedido-cerrar" aria-label="Cerrar">✕</button>
+      <h2 id="titulo-pedido" class="titulo-medio">Pedir libro</h2>
+      <p class="pedido__libro" id="pedido-libro-texto"></p>
+      <form name="pedido" method="POST" data-netlify="true" netlify-honeypot="campo-trampa" id="form-pedido">
+        <input type="hidden" name="form-name" value="pedido">
+        <p class="visualmente-oculto"><label>No completar: <input name="campo-trampa" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="libro" id="pedido-libro">
+        <label class="campo">Nombre<input type="text" name="nombre" required autocomplete="name"></label>
+        <label class="campo">Mail<input type="email" name="email" required autocomplete="email"></label>
+        <label class="campo">Ciudad (para coordinar la entrega)<input type="text" name="ciudad" autocomplete="address-level2"></label>
+        <label class="campo">Mensaje (opcional)<textarea name="mensaje"></textarea></label>
+        <button class="boton boton--tinta pedido__enviar" type="submit">Enviar pedido</button>
+        <p class="pedido__estado" id="pedido-estado" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="js/fichero.js"></script>
+</body>
+</html>
