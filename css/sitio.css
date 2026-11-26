@@ -96,12 +96,20 @@ a:hover { color: var(--rojo); }
   font-family: var(--f-titulo); font-stretch: 68%; font-weight: 850;
   font-size: 22px; text-transform: uppercase; text-decoration: none;
   border: 4px solid var(--tinta); cursor: pointer;
-  transition: transform .12s ease;
+  /* reposo: contorno de tinta */
+  background: transparent; color: var(--tinta); box-shadow: 0 0 0 var(--rojo);
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease, color .12s ease;
 }
-.boton:hover { transform: translate(-2px, -2px); }
-.boton--tinta { background: var(--tinta); color: var(--kraft); box-shadow: 6px 6px 0 var(--rojo); }
-.boton--tinta:hover { color: var(--kraft); }
-.boton--borde { background: transparent; color: var(--tinta); }
+/* activo: se entinta y aparece la sombra roja (hover, foco, seleccionado) */
+.boton:hover, .boton:focus-visible, .boton[aria-pressed="true"], .boton[aria-current="page"] {
+  background: var(--tinta); color: var(--kraft);
+  box-shadow: 6px 6px 0 var(--rojo); transform: translate(-2px, -2px);
+}
+/* al apretar: se hunde como un sello */
+.boton:active { background: var(--tinta); color: var(--kraft); box-shadow: 1px 1px 0 var(--rojo); transform: translate(3px, 3px); }
+.boton:disabled { opacity: .5; cursor: wait; }
+/* variantes que se conservan por compatibilidad: mismo comportamiento */
+.boton--tinta, .boton--borde { }
 .boton--chico { min-height: 48px; padding: 0 18px; font-size: 19px; }
 .boton--ui {
   font-family: var(--f-ui); font-stretch: normal; font-weight: 700;
@@ -232,7 +240,20 @@ a:hover { color: var(--rojo); }
   background: transparent; color: var(--tinta); border: 3px solid var(--tinta);
   font-family: var(--f-ui); font-weight: 700; font-size: 14px; cursor: pointer;
 }
+.filtro:hover { background: var(--kraft-claro); }
 .filtro[aria-pressed="true"] { background: var(--tinta); color: var(--kraft); }
+.filtro:active { transform: translate(2px, 2px); }
+
+/* botones chicos de interfaz: mismo par reposo/activo */
+.menu-boton:hover, .menu-boton[aria-expanded="true"],
+.pedido__cerrar:hover, .pedido__cerrar:focus-visible { background: var(--tinta); color: var(--kraft); }
+.pedido__cerrar { color: var(--tinta); }
+
+/* navegación: subrayado rojo al pasar y marcado en la página actual */
+.nav a:hover, .nav a[aria-current="page"] {
+  color: var(--tinta); text-decoration: underline; text-decoration-color: var(--rojo);
+  text-decoration-thickness: 4px; text-underline-offset: 6px;
+}
 
 .fichero__cuerpo { margin-top: 28px; border-top: 6px solid var(--tinta); padding-top: 26px; }
 .fichero__vacio { font-family: var(--f-ui); font-size: 16px; padding: 24px 0; }
@@ -366,8 +387,10 @@ a:hover { color: var(--rojo); }
 .biblioteca__caja h2 { font-size: clamp(46px, 8vw, 64px); }
 .biblioteca__caja p { margin: 12px 0 0; font-size: 19px; max-width: 40ch; }
 .donar { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-.donar .boton { background: var(--kraft); color: var(--tinta); box-shadow: 6px 6px 0 var(--tinta); }
-.donar .boton:hover { color: var(--tinta); }
+/* sobre verde: en reposo contorno kraft; activo se rellena de kraft */
+.donar .boton { border-color: var(--kraft); color: var(--kraft); }
+.donar .boton:hover, .donar .boton:focus-visible { background: var(--kraft); color: var(--tinta); box-shadow: 6px 6px 0 var(--tinta); }
+.donar .boton:active { background: var(--kraft); color: var(--tinta); box-shadow: 1px 1px 0 var(--tinta); }
 .donar__nota { font-family: var(--f-ui); font-size: 14px; }
 .donar__nota a { color: var(--kraft); }
 .copiado { font-family: var(--f-ui); font-size: 14px; font-weight: 700; min-height: 1.4em; }
@@ -398,9 +421,12 @@ a:hover { color: var(--rojo); }
   background: var(--kraft); color: var(--tinta); border: 3px solid var(--kraft);
   font-family: var(--f-ui); font-size: 16px;
 }
+.suscribir button:hover, .suscribir button:focus-visible { background: var(--rojo); border-color: var(--rojo); color: var(--tinta); }
+.suscribir button:active { background: var(--rojo); transform: translate(2px, 2px); }
 .suscribir button {
-  min-height: 54px; padding: 0 18px; background: var(--rojo); color: var(--tinta);
+  min-height: 54px; padding: 0 18px; background: transparent; color: var(--kraft);
   border: 3px solid var(--kraft); cursor: pointer;
+  transition: background-color .12s ease, color .12s ease, transform .12s ease;
   font-family: var(--f-titulo); font-stretch: 68%; font-weight: 900; font-size: 19px; text-transform: uppercase;
 }
 .suscribir__estado { font-family: var(--f-ui); font-size: 14px; min-height: 1.4em; margin-top: 8px; }
